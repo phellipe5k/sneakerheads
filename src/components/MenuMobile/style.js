@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 export const Wrapper = styled.div`
   display: none;
@@ -29,9 +29,17 @@ export const MenuMobileOn = styled.div`
   width: 100%;
   background-color: white;
   height: 100vh;
-  display: ${({show}) => show ? 'flex' : 'none'};
+  display: flex;
+  ${({show}) => css`
+  transition: 650ms;
+  z-index: ${show ? '1' : '-1' };
+  opacity: ${show ? '1' : '0' };
+  `}
   flex-direction: column;
   justify-content: space-between;
+  > svg {
+    cursor: pointer;
+  }
 `;
 
 export const Navigation = styled.div`
@@ -57,14 +65,6 @@ export const Account = styled.div`
   align-items: center;
   min-height: 100px;
   color: #656565;
-  button {
-    width: 80%;
-    height: 40px;
-    background-color:  #0098FF;
-    border: none;
-    color: white;
-    border-radius: 6px;
-  }
   a {
     color: #0098FF;
   }

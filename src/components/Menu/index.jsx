@@ -1,11 +1,12 @@
 import * as S from './style';
+import PropTypes from 'prop-types';
 import Navigation from '../Navigation';
 import Logo from '../Logo';
 import User from '../User';
 import MenuMobile from '../MenuMobile';
 import HeaderSearchBar from '../HeaderSearchBar';
 
-const Menu = () => {
+const Menu = ({ logged }) => {
   return (
     <S.Wrapper>
       <S.Left>
@@ -17,12 +18,21 @@ const Menu = () => {
             <HeaderSearchBar />
         </S.WrapperBar>
         <S.WrapperUser>
-          <User />
+          <User logged={ logged } />
         </S.WrapperUser>
       </S.Right>
-      <MenuMobile />
+      <MenuMobile logged={ logged } />
     </S.Wrapper>
   )
 }
+
+
+Menu.propTypes = {
+  logged: PropTypes.bool,
+};
+
+Menu.defaultProps = {
+  logged: false,
+};
 
 export default Menu;

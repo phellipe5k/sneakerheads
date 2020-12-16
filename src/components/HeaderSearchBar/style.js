@@ -7,7 +7,7 @@ export const WrapperSearchBar = styled.div`
 
   .search-icon {
     cursor: pointer;
-    fill: #656565;
+    color: #c4c4c4;
     position: absolute;
     right: 10px;
     top: 50%;

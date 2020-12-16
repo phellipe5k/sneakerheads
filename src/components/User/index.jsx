@@ -2,17 +2,18 @@ import { useState } from 'react';
 import * as S from './style';
 import Navigation from '../Navigation';
 import Logo from '../Logo';
+import Button from '../Button';
 import { MenuAlt1 } from '@styled-icons/heroicons-outline/MenuAlt1';
 import { User as UserIcon} from '@styled-icons/fa-regular/User';
 import { User as UserSolid } from '@styled-icons/boxicons-solid/User';
 import { SignInAlt } from '@styled-icons/fa-solid/SignInAlt';
 import { BookmarkStarFill } from '@styled-icons/bootstrap/BookmarkStarFill';
 import { DownArrow } from '@styled-icons/boxicons-solid/DownArrow';
-import MenuSearchBar from '../HeadSearchBar';
 
-const User = () => {
-  const [dropDownVisible, setDropDownVisible] = useState(false)
-  return (
+const User = ({ logged }) => {
+  const [dropDownVisible, setDropDownVisible] = useState(false);
+  return logged
+  ? (
     <S.User>
       <S.Name
         visible={dropDownVisible}
@@ -34,6 +35,9 @@ const User = () => {
       <BookmarkStarFill width="25" />
     </S.User>
   )
+  : (
+   <Button>Sign-In</Button>
+   )
 }
 
 export default User;

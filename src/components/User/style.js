@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const User = styled.div`
   align-items: center;
@@ -32,19 +32,22 @@ export const Name = styled.h5`
     transition: 450ms;
     position: relative;
     z-index: 3;
-    color: ${({visible}) => visible ? 'white' : '#656565' };
+    ${({visible}) => css`
+    color: ${visible ? 'white' : '#656565' };
     &:hover {
-      color: ${({visible}) => visible ? 'white' : '#0098ff' };
+      color: ${visible ? 'white' : '#0098ff' };
     }
+    `}
   }
 `;
 
 export const DropDown = styled.div`
+
   background-color: #0098ff;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
-  height: 75px;
+  height: 100px;
   justify-content: flex-end;
   left: 50%;
   padding: 10px;
@@ -52,8 +55,10 @@ export const DropDown = styled.div`
   top: 10%;
   transform: translateX(-50%);
   transition: 450ms ease-in-out;
-  z-index: ${({visible}) => visible ? '1' : '-1' };
-  opacity: ${({visible}) => visible ? '1' : '0' };
+  ${({visible}) => css`
+  z-index: ${visible ? '1' : '-1' };
+  opacity: ${visible ? '1' : '0' };
+  `}
   // visibility: ${({visible}) => visible ? 'visible' : 'hidden'};
   .user-solid, .sign-out {
     background-color: white;

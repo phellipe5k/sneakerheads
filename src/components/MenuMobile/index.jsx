@@ -2,26 +2,41 @@ import { useState } from 'react';
 import * as S from './style';
 import { MenuAlt1 } from '@styled-icons/heroicons-outline/MenuAlt1';
 import Logo from '../Logo';
+import { Close } from '@styled-icons/evil/Close';
 import { BookmarkStarFill } from '@styled-icons/bootstrap/BookmarkStarFill';
+import Button from '../Button';
 
-const MenuMobile = () => {
-  const logged = true;
+const MenuMobile = ({logged}) => {
   const [menuMobile, setMenuMobile] = useState(false);
   return (
     <S.Wrapper>
       <S.MenuMobileOn show={menuMobile}>
-        <h1 onClick={() => setMenuMobile(!menuMobile)}>X</h1>
+        <Close
+          onClick={() => setMenuMobile(!menuMobile)}
+          width="45"
+        />
         <S.Navigation>
           <a href="#">Home</a>
           <a href="#">Sneakers</a>
           <a href="#">Brands</a>
           <a href="#">Stores</a>
+          {logged && <a href="#">Perfil</a>}
         </S.Navigation>
-        <S.Account>
-          <button type="button" >Entrar</button>
-          <span>ou</span>
-          <a href="#">Crie sua conta</a>
-        </S.Account>
+          {
+          logged
+          ? (
+            <S.Account>
+              <Button>Sair</Button>
+            </S.Account>
+          )
+          : (
+            <S.Account>
+              <Button >Entrar</Button>
+              <span>ou</span>
+              <a href="#">Crie sua conta</a>
+            </S.Account>
+          )
+          }
       </S.MenuMobileOn>
      <S.WrapperIcons>
       <MenuAlt1
