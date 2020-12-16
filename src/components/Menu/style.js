@@ -12,6 +12,9 @@ export const Left = styled.div`
   display: flex;
   align-items: center;
   width: 35%;
+  @media(max-width: 870px) {
+    display: none;
+  }
 `;
 
 export const Right = styled.div`
@@ -20,6 +23,9 @@ export const Right = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media(max-width: 870px) {
+    display: none;
+  }
 
 `;
 

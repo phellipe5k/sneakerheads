@@ -8,7 +8,7 @@ import { User as UserSolid } from '@styled-icons/boxicons-solid/User';
 import { SignInAlt } from '@styled-icons/fa-solid/SignInAlt';
 import { BookmarkStarFill } from '@styled-icons/bootstrap/BookmarkStarFill';
 import { DownArrow } from '@styled-icons/boxicons-solid/DownArrow';
-import MenuSearchBar from '../MenuSearchBar';
+import MenuSearchBar from '../HeadSearchBar';
 
 const User = () => {
   const [dropDownVisible, setDropDownVisible] = useState(false)

@@ -1,7 +1,7 @@
 import * as S from './style';
 import { SearchAlt2 } from '@styled-icons/boxicons-regular/SearchAlt2';
 
-const MenuSearchBar = () => {
+const HeadSearchBar = () => {
   return (
     <S.Wrapper>
         <S.Bar type="text" placeholder="Search the sneaker that i want "/>
@@ -10,4 +10,4 @@ const MenuSearchBar = () => {
   )
 }
 
-export default MenuSearchBar;
+export default HeadSearchBar;

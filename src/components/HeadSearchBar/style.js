@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
     cursor: pointer;
     fill: #656565;
     position: absolute;
-    right: 0;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     transition: 450ms;

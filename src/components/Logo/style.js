@@ -2,13 +2,13 @@ import styled, { css } from 'styled-components';
 
 const SizesModified = {
   small: () => css`
-  width: 40px;
+  width: 50px;
   `,
   large: () => css`
-  width: 100px;
+  width: 120px;
   `,
   medium: () => css`
-  width: 75px;
+  width: 90px;
   `,
 }
 

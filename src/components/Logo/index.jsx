@@ -1,10 +1,10 @@
+import Image from 'next/image'
 import * as S from './style';
-import logo from '../../images/logo.png';
 import PropTypes from 'prop-types';
 
 const Logo = ({ size }) => (
   <S.Wrapper>
-    <S.Image src={logo} size={ size } />
+    <S.Image src="https://cdn.dribbble.com/users/906391/screenshots/8978996/image.png?compress=1&resize=800x600" size={ size } />
   </S.Wrapper>
 )
 

@@ -4,11 +4,12 @@ import Link from 'next/link';
 import { useContext, useEffect, useState } from 'react';
 import Context from '../Provider/Context';
 import Logo from '../components/Logo';
+import Menu from '../components/Menu';
 
 export default function Home({res}) {
   return (
-    <div className={styles.container}>
-      asd
+    <div style={{padding: ' 0 2%'}}>
+      <Menu/>
     </div>
   )
 }
