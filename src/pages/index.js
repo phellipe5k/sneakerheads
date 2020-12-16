@@ -8,7 +8,7 @@ import Menu from '../components/Menu';
 
 export default function Home({res}) {
   return (
-    <div style={{padding: ' 0 2%'}}>
+    <div>
       <Menu/>
     </div>
   )

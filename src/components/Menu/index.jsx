@@ -2,8 +2,8 @@ import * as S from './style';
 import Navigation from '../Navigation';
 import Logo from '../Logo';
 import User from '../User';
-import HeadSearchBar from '../HeadSearchBar';
 import MenuMobile from '../MenuMobile';
+import HeaderSearchBar from '../HeaderSearchBar';
 
 const Menu = () => {
   return (
@@ -14,7 +14,7 @@ const Menu = () => {
       </S.Left>
       <S.Right>
         <S.WrapperBar>
-          <HeadSearchBar />
+            <HeaderSearchBar />
         </S.WrapperBar>
         <S.WrapperUser>
           <User />

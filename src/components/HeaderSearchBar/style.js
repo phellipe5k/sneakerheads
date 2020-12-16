@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const WrapperSearchBar = styled.div`
   position: relative;
   display: inline-block;
   width: 100%;

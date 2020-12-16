@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.nav`
+export const WrapperNavigationD = styled.nav`
   width: 80%;
 `;
 
