@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import * as S from './style';
 import { MenuAlt1 } from '@styled-icons/heroicons-outline/MenuAlt1';
 import Logo from '../Logo';
@@ -8,6 +9,8 @@ import Button from '../Button';
 
 const MenuMobile = ({logged}) => {
   const [menuMobile, setMenuMobile] = useState(false);
+  const router = useRouter();
+  const wishlist = 7;
   return (
     <S.Wrapper>
       <S.MenuMobileOn show={menuMobile}>
@@ -15,12 +18,12 @@ const MenuMobile = ({logged}) => {
           onClick={() => setMenuMobile(!menuMobile)}
           width="45"
         />
-        <S.Navigation>
-          <a href="#">Home</a>
-          <a href="#">Sneakers</a>
-          <a href="#">Brands</a>
-          <a href="#">Stores</a>
-          {logged && <a href="#">Perfil</a>}
+        <S.Navigation path={ router }>
+          <a href="#" id="home" >Home</a>
+          <a href="#" id="sneakers">Sneakers</a>
+          <a href="#" id="brands">Brands</a>
+          <a href="#" id="stores">Stores</a>
+          {logged && <a href="#" id="perfil">Perfil</a>}
         </S.Navigation>
           {
           logged
@@ -41,11 +44,11 @@ const MenuMobile = ({logged}) => {
      <S.WrapperIcons>
       <MenuAlt1
           width="45"
-          className="menu"
+          id="menu"
           onClick={() => setMenuMobile(!menuMobile)}
         />
         <Logo size="large" />
-        {logged && <BookmarkStarFill width="40" />}
+        {logged && <S.Favorites existWish={wishlist} ><BookmarkStarFill width="40" /><span>{wishlist}</span></S.Favorites>}
      </S.WrapperIcons>
     </S.Wrapper>
   )

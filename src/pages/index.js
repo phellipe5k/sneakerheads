@@ -8,6 +8,6 @@ import Menu from '../components/Menu';
 
 export default function Home({res}) {
   return (
-    <Menu logged={true} />
+    <Menu logged />
   )
 }

@@ -23,12 +23,12 @@ const User = ({ logged }) => {
       <S.WrapDrop>
         <DownArrow
           width="15"
-          className="arrow-down"
+          id="arrow-down"
           onClick={() => setDropDownVisible(!dropDownVisible)}
         />
         <S.DropDown visible={dropDownVisible}>
-          <UserSolid className="user-solid"/>
-          <SignInAlt className="sign-out "/>
+          <UserSolid id="user-solid"/>
+          <SignInAlt id="sign-out"/>
         </S.DropDown>
       </S.WrapDrop>
       </S.Name>
@@ -36,7 +36,7 @@ const User = ({ logged }) => {
     </S.User>
   )
   : (
-   <Button>Sign-In</Button>
+   <Button styles="secondary">Sign-In</Button>
    )
 }
 

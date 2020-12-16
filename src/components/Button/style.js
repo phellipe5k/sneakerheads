@@ -20,10 +20,29 @@ ${({size}) => css`
 
 export const Button = styled.button`
 width: 100%;
-background-color: #0098FF;
+cursor: pointer;
 padding: 10px;
+outline: none;
+${({styles}) => styles === 'primary'
+? css`
+background-color: #0098FF;
 border-radius: 7px;
 border: none;
 color: white;
-cursor: pointer;
+`
+: css`
+  color: #656565;
+  background: none;
+  border-radius: 15px;
+  border: 2px solid #c4c4c4;
+  transition: 450ms;
+  &:hover {
+    background-color: #0098ff;
+    transition: 450ms;
+    border: none;
+    color: white;
+  }
+`
+}
+
 `;

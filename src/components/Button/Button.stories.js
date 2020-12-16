@@ -7,6 +7,18 @@ export default {
 
 const Story = (args) => <Button {...args} />;
 
+export const Primary = Story.bind({});
+Primary.args = {
+  size: 'medium',
+  styles: 'primary',
+};
+
+export const Secondary = Story.bind({});
+Secondary.args = {
+  size: 'medium',
+  styles: 'secondary',
+};
+
 export const Default = Story.bind({});
 Default.args = {
   size: 'medium',

@@ -5,7 +5,7 @@ const HeaderSearchBar = () => {
   return (
     <S.WrapperSearchBar>
         <S.Bar type="text" placeholder="Search a sneaker"/>
-        <SearchAlt2 className="search-icon"/>
+        <SearchAlt2 id="search-icon"/>
     </S.WrapperSearchBar>
   )
 }

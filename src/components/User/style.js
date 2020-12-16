@@ -28,7 +28,7 @@ export const Name = styled.h5`
   transition: 450ms;
   width: 80%;
   position:relative;
-  .arrow-down {
+  #arrow-down {
     transition: 450ms;
     position: relative;
     z-index: 3;
@@ -52,7 +52,7 @@ export const DropDown = styled.div`
   left: 50%;
   padding: 10px;
   position: absolute;
-  top: 10%;
+  top: 0;
   transform: translateX(-50%);
   transition: 450ms ease-in-out;
   ${({visible}) => css`
@@ -60,8 +60,8 @@ export const DropDown = styled.div`
   opacity: ${visible ? '1' : '0' };
   `}
   // visibility: ${({visible}) => visible ? 'visible' : 'hidden'};
-  .user-solid, .sign-out {
-    background-color: white;
+  #user-solid, #sign-out {
+    color: white;
     width: 25px;
     border-radius: 50%;
     margin-bottom: 15%;
@@ -69,8 +69,7 @@ export const DropDown = styled.div`
     cursor: pointer;
     z-index: 2;
     &:hover {
-      background-color: #656565;
-      color: white;
+      color: #656565;
       transition: 450ms;
     }
   }
