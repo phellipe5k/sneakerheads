@@ -8,8 +8,6 @@ import Menu from '../components/Menu';
 
 export default function Home({res}) {
   return (
-    <div>
-      <Menu/>
-    </div>
+    <Menu logged={true} />
   )
 }
