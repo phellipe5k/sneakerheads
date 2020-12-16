@@ -16,6 +16,10 @@ export const User = styled.div`
   }
 `;
 
+export const WrapDrop = styled.div`
+position: relative;
+`;
+
 export const Name = styled.h5`
   cursor: pointer;
   display: flex;
@@ -26,25 +30,43 @@ export const Name = styled.h5`
   position:relative;
   .arrow-down {
     transition: 450ms;
+    position: relative;
+    z-index: 3;
+    color: ${({visible}) => visible ? 'white' : '#656565' };
     &:hover {
-      color: #0098ff
+      color: ${({visible}) => visible ? 'white' : '#0098ff' };
     }
   }
 `;
 
 export const DropDown = styled.div`
   background-color: #0098ff;
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
   height: 75px;
   justify-content: flex-end;
+  left: 50%;
   padding: 10px;
   position: absolute;
-  right: 0;
   top: 10%;
-  z-index: -1;
-  border-radius: 6px;
-  .user-solid {
+  transform: translateX(-50%);
+  transition: 450ms ease-in-out;
+  z-index: ${({visible}) => visible ? '1' : '-1' };
+  opacity: ${({visible}) => visible ? '1' : '0' };
+  // visibility: ${({visible}) => visible ? 'visible' : 'hidden'};
+  .user-solid, .sign-out {
+    background-color: white;
+    width: 25px;
+    border-radius: 50%;
     margin-bottom: 15%;
+      transition: 450ms;
+    cursor: pointer;
+    z-index: 2;
+    &:hover {
+      background-color: #656565;
+      color: white;
+      transition: 450ms;
+    }
   }
 `;
