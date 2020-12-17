@@ -7,6 +7,9 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 4%;
+  @media(max-width: 870px) {
+    padding: 0;
+  }
 `;
 
 export const Left = styled.div`

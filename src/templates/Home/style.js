@@ -21,10 +21,15 @@ export const BackgroundMask = styled.div`
 `;
 
 export const Content = styled.div`
-  height: 100vh;
+  height: 100%;
   display: flex;
+  padding: 10% 0;
   align-items: center;
   justify-content: space-around;
+  @media(max-width: 870px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 `;
 
 export const Slogan = styled.h2`
@@ -34,12 +39,26 @@ export const Slogan = styled.h2`
   width: 18%;
   font-weight: 300;
   height: 50%;
+  @media(max-width: 870px) {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    font-size: 20pt;
+    height: fit-content;
+    order: 1;
+  }
 `;
 
 export const Interact = styled.div`
   color: #E9E9E9;
   width: 30%;
   height: 70%;
+  @media(max-width: 870px) {
+    width: 80%;
+    order: 0;
+    height: fit-content;
+  }
 `;
 
 export const Title = styled.h1`
@@ -48,7 +67,10 @@ export const Title = styled.h1`
   letter-spacing: 10px;
   margin-bottom: 25px;
   text-align: center;
-  font-weight: 500;
+  font-weight: 5 00;
+  @media(max-width: 870px) {
+    font-size: 50pt;
+  }
 `;
 
 export const Social = styled.div`
@@ -60,6 +82,13 @@ export const Social = styled.div`
   position: relative;
   width: 20%;
   z-index: 1;
+  @media(max-width: 870px) {
+    order: 2;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 `;
 export const Line = styled.div`
   background-color: grey;
@@ -70,6 +99,10 @@ export const Line = styled.div`
   transform: translateX(-50%);
   width: 4px;
   z-index: -1;
+  @media(max-width: 870px) {
+    width: 100%;
+    height: 4px;
+  }
 `;
 
 export const IconWrapper = styled.div`

@@ -11,6 +11,12 @@ export const Box = styled.div`
   display: flex;
   align-items: flex-end;
   color: white;
+  @media(max-width: 615px) {
+    background-color: #0098FF;
+    padding: 5%;
+    height: 250px;
+    align-items: baseline;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -18,11 +24,18 @@ export const Wrapper = styled.div`
   width: 100%;
   justify-content: space-evenly;
   margin-bottom: 30px;
+  flex-wrap: wrap;
+  @media(max-width: 615px) {
+    padding: 5%;
+  }
 `;
 
 export const InfoBox = styled.div`
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  @media(max-width: 615px) {
+    width: 50%;
+  }
 `
 
 export const Title = styled.h3`

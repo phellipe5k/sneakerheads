@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   @media(max-width: 870px) {
       display: flex;
       width: 100%;
+      height: fit-content;
       align-items: flex-start;
       justify-content: space-between;
       color: #c4c4c4;
@@ -13,27 +14,28 @@ export const Wrapper = styled.div`
         cursor: pointer;
       }
     }
-    padding: 0;
     height: 100vh;
 `;
 
 export const WrapperIcons = styled.div`
-display:flex;
-width: 100%;
-justify-content: space-between;
+  display:flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 4%;
 `;
 //absolute
 
 export const MenuMobileOn = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100%;
-  background-color: white;
-  height: 100vh;
+  background-color: red;
+  height: 100%;
+  padding: 0;
   display: flex;
   ${({show}) => css`
   transition: 650ms;
-  z-index: ${show ? '1' : '-1' };
-  opacity: ${show ? '1' : '0' };
+  z-index: ${show ? '2' : '-1' };
+  opacity: ${show ? '2' : '0' };
   `}
   flex-direction: column;
   justify-content: space-between;
