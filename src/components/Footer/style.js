@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import img from '../../../public/footer.svg';
 
 export const Box = styled.div`
-  background-image: url(${img});
+  background-image: url('https://svgshare.com/i/SNW.svg');
   padding: 15px;
   width: 100%;
-  background-position: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
   min-height: 320px;
   display: flex;
   align-items: flex-end;
@@ -35,14 +36,19 @@ export const Line = styled.div`
 `;
 
 export const ListInfo = styled.div`
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
 `;
 
 export const Itens = styled.a`
-text-decoration: none;
-color: white;
-font-weight: lighter;
-padding: 2% 0;
-list-style-position: outside;
+  text-decoration: none;
+  color: white;
+  font-weight: lighter;
+  padding: 2% 0;
+  list-style-position: outside;
+  &:hover {
+    color: #ccc;
+    transition: 450ms;
+  }
 `; 

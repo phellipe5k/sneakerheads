@@ -31,7 +31,7 @@ border: none;
 color: white;
 `
 : css`
-  color: #656565;
+  color: #c4c4c4;
   background: none;
   border-radius: 15px;
   border: 2px solid #c4c4c4;

@@ -32,11 +32,11 @@ const User = ({ logged }) => {
         </S.DropDown>
       </S.WrapDrop>
       </S.Name>
-      <BookmarkStarFill width="25" />
+      <BookmarkStarFill width="30" />
     </S.User>
   )
   : (
-   <Button styles="secondary">Sign-In</Button>
+   <Button styles="secondary">L O G I N</Button>
    )
 }
 

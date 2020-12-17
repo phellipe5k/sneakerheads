@@ -23,7 +23,7 @@ export const Linkers = styled.div`
   }
   a {
     font-size: 12pt;
-    color: #656565;
+    color: #c4c4c4;
     text-decoration: none;
     transition: 450ms;
     font-weight: 400;

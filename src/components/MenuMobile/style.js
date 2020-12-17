@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
       width: 100%;
       align-items: flex-start;
       justify-content: space-between;
-      color: #656565;
+      color: #c4c4c4;
       #menu {
         cursor: pointer;
       }

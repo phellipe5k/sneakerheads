@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const User = styled.div`
   align-items: center;
-  color: #656565;
+  color: #c4c4c4;
   display: flex;
   font-size: 20pt;
   justify-content: space-between;
@@ -31,9 +31,10 @@ export const Name = styled.h5`
   #arrow-down {
     transition: 450ms;
     position: relative;
+    margin-right: 5px;
     z-index: 3;
     ${({visible}) => css`
-    color: ${visible ? 'white' : '#656565' };
+    color: ${visible ? 'white' : '#c4c4c4' };
     &:hover {
       color: ${visible ? 'white' : '#0098ff' };
     }

@@ -5,10 +5,10 @@ const SizesModified = {
   width: 50px;
   `,
   large: () => css`
-  width: 120px;
+  width: 80px;
   `,
   medium: () => css`
-  width: 90px;
+  width: 65px;
   `,
 }
 
