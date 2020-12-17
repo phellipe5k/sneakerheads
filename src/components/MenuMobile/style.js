@@ -28,7 +28,6 @@ export const WrapperIcons = styled.div`
 export const MenuMobileOn = styled.div`
   position: fixed;
   width: 100%;
-  background-color: red;
   height: 100%;
   padding: 0;
   display: flex;
