@@ -21,14 +21,15 @@ export const BackgroundMask = styled.div`
 `;
 
 export const Content = styled.div`
-  height: 100%;
+  height: 100vh;
   display: flex;
-  padding: 10% 0;
   align-items: center;
   justify-content: space-around;
   @media(max-width: 870px) {
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    height: 100%;
+    padding: 7% 0;
   }
 `;
 
@@ -104,6 +105,7 @@ export const Line = styled.div`
     height: 4px;
   }
 `;
+
 
 export const IconWrapper = styled.div`
   background-color: white;

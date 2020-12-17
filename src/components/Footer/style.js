@@ -14,7 +14,7 @@ export const Box = styled.div`
   @media(max-width: 615px) {
     background-color: #0098FF;
     padding: 5%;
-    height: 250px;
+    height: 380px;
     align-items: baseline;
   }
 `;
