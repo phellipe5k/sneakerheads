@@ -7,7 +7,7 @@ const Navigation = () => {
   return (
     <S.WrapperNavigationD>
       <S.Linkers path={ router }>
-        <a href="#" id="sneakers">Sneakers</a>
+        <Link href="/sneakers" id="sneakers"><a>Sneakers</a></Link>
         <a href="#" id="brands" >Brands</a>
         <a href="#" id="stores">Stores</a>
         </S.Linkers>

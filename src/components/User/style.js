@@ -43,31 +43,30 @@ export const Name = styled.h5`
 `;
 
 export const DropDown = styled.div`
-
-  background-color: #0098ff;
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  height: 100px;
-  justify-content: flex-end;
-  left: 50%;
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  transform: translateX(-50%);
-  transition: 450ms ease-in-out;
   ${({visible}) => css`
-  z-index: ${visible ? '1' : '-1' };
-  opacity: ${visible ? '1' : '0' };
-  `}
-  // visibility: ${({visible}) => visible ? 'visible' : 'hidden'};
+    background-color: #0098ff;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: flex-end;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    transition: 450ms ease-in-out;
+    z-index: ${visible ? '1' : '-1' };
+    opacity: ${visible ? '1' : '0' };
+    `
+    }
   #user-solid, #sign-out {
-    color: white;
-    width: 25px;
     border-radius: 50%;
-    margin-bottom: 15%;
-      transition: 450ms;
+    color: white;
     cursor: pointer;
+    margin-bottom: 15%;
+    transition: 450ms;
+    width: 25px;
     z-index: 2;
     &:hover {
       color: #656565;

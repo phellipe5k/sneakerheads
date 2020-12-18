@@ -11,6 +11,7 @@ export const Box = styled.div`
   display: flex;
   align-items: flex-end;
   color: white;
+
   @media(max-width: 615px) {
     background-color: #0098FF;
     padding: 5%;
@@ -60,6 +61,7 @@ export const Itens = styled.a`
   font-weight: lighter;
   padding: 2% 0;
   list-style-position: outside;
+
   &:hover {
     color: #ccc;
     transition: 450ms;

@@ -1,4 +1,18 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const handlePath = (path) => {
+  if (path) {
+    switch (path.pathname) {
+    case '/sneakers':
+      return css`#sneakers { border-bottom: 5px solid #0098FF } `;
+    case '/brands':
+      return css`#brands { border-bottom: 5px solid #0098FF }`;
+    case '/stores':
+      return css`#stores { border-bottom: 5px solid #0098FF }`;
+    }
+  }
+};
+
 
 export const WrapperNavigationD = styled.nav`
   width: 80%;
@@ -9,16 +23,7 @@ export const Linkers = styled.div`
   display: flex;
   justify-content: space-evenly;
   ${({ path }) => {
-    if (path) {
-      switch (path.pathname) {
-      case '/sneakers':
-        return css`#sneakers { border-bottom: 5px solid #0098FF } `;
-      case '/brands':
-        return css`#brands { border-bottom: 5px solid #0098FF }`;
-      case '/stores':
-        return css`#stores { border-bottom: 5px solid #0098FF }`;
-      }
-    }
+    return handlePath(path)
   }
   }
   a {

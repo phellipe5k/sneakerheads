@@ -1,5 +1,23 @@
 import styled, {css} from 'styled-components';
 
+const handleRoute = (path) => {
+  if (path) {
+    switch (path.pathname) {
+    case '/':
+      return css` #home { border-bottom: 5px solid #0098FF } `;
+    case '/sneakers':
+      return css`#sneakers { border-bottom: 5px solid #0098FF } `;
+    case '/brands':
+      return css`#brands { border-bottom: 5px solid #0098FF }`;
+    case '/stores':
+      return css`#stores { border-bottom: 5px solid #0098FF }`;
+    case '/perfil':
+      return css`#perfil { border-bottom: 5px solid #0098FF }`;
+  }
+}
+}
+
+
 export const Wrapper = styled.div`
   display: none;
   width: 100%;
@@ -26,22 +44,22 @@ export const WrapperIcons = styled.div`
 //absolute
 
 export const MenuMobileOn = styled.div`
+${({show}) => css`
   position: fixed;
   width: 100%;
   background-color: white;
   height: 100%;
   padding: 0;
   display: flex;
-  ${({show}) => css`
   transition: 650ms;
   z-index: ${show ? '2' : '-1' };
   opacity: ${show ? '2' : '0' };
-  `}
   flex-direction: column;
   justify-content: space-between;
   > svg {
     cursor: pointer;
   }
+  `}
 `;
 
 export const Navigation = styled.div`
@@ -56,20 +74,7 @@ export const Navigation = styled.div`
     font-weight: bold;
   }
   ${({ path }) => {
-    if (path) {
-      switch (path.pathname) {
-      case '/':
-        return css` #home { border-bottom: 5px solid #0098FF } `;
-      case '/sneakers':
-        return css`#sneakers { border-bottom: 5px solid #0098FF } `;
-      case '/brands':
-        return css`#brands { border-bottom: 5px solid #0098FF }`;
-      case '/stores':
-        return css`#stores { border-bottom: 5px solid #0098FF }`;
-      case '/perfil':
-        return css`#perfil { border-bottom: 5px solid #0098FF }`;
-    }
-  }
+    return handleRoute(path);
     }
     }
 `;

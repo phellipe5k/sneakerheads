@@ -25,10 +25,10 @@ padding: 10px;
 outline: none;
 ${({styles}) => styles === 'primary'
 ? css`
-background-color: #0098FF;
-border-radius: 7px;
-border: none;
-color: white;
+  background-color: #0098FF;
+  border-radius: 7px;
+  border: none;
+  color: white;
 `
 : css`
   color: #c4c4c4;

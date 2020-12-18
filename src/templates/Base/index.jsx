@@ -6,7 +6,7 @@ const Base = ({ children }) => {
   return (
     <S.Container>
       <S.WrapHeader>
-        <Menu logged />
+        <Menu />
       </S.WrapHeader>
       { children }
       <S.WrapFooter>
