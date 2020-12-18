@@ -1,19 +1,35 @@
 import styled, { css } from 'styled-components';
 
-const handlePath = (path) => {
+const underLine = (theme, route) => {
+  return css`
+    #${route} {
+      position: relative;
+      ::after {
+        content: '';
+        background-color: ${theme.colors.primary};
+        width: 40%;
+        height: 4px;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+      }
+    } 
+    
+  `
+}
+
+const handlePath = (theme, path) => {
   if (path) {
-    console.log(path)
     switch (path.pathname) {
     case '/sneakers':
-      return css`#sneaker { border-bottom: 5px solid #0098FF } `;
+      return underLine(theme, 'sneaker');
     case '/brands':
-      return css`#brand { border-bottom: 5px solid #0098FF }`;
+      return underLine(theme, 'brand');
     case '/stores':
-      return css`#store { border-bottom: 5px solid #0098FF }`;
+      return underLine(theme, 'store');
     }
   }
 };
-
 
 export const WrapperNavigationD = styled.nav`
   width: 80%;
@@ -23,15 +39,8 @@ export const Linkers = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  ${({ path }) => {
-    switch (path.pathname) {
-    case '/sneakers':
-      return css`#sneaker { border-bottom: 5px solid #0098FF } `;
-    case '/brands':
-      return css`#brand { border-bottom: 5px solid #0098FF }`;
-    case '/stores':
-      return css`#store { border-bottom: 5px solid #0098FF }`;
-    }
+  ${({ theme, path }) => {
+    return handlePath(theme, path);
   }
   }
   a {
