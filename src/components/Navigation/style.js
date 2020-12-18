@@ -36,22 +36,23 @@ export const WrapperNavigationD = styled.nav`
 `;
 
 export const Linkers = styled.div`
+  ${({ theme }) => css`
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  ${({ theme, path }) => {
+  ${({ path }) => {
     return handlePath(theme, path);
   }
   }
   a {
-    font-size: 12pt;
-    color: #c4c4c4;
-    text-decoration: none;
-    transition: 450ms;
+    color: ${theme.colors.textLight};
+    font-size: ${theme.font.sizes.small};
     font-weight: 400;
+    text-decoration: none;
+    transition: ${theme.transition.default};
     &:hover {
-      color: #0098FF;
-    transition: 450ms;
+      color: ${theme.colors.primary}
     }
   }
+  `}
 `;

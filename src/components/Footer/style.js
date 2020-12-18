@@ -1,23 +1,25 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { mediaQuery } from '../../styles/theme';
 
 export const Box = styled.div`
-  background-image: url('https://svgshare.com/i/SNW.svg');
-  padding: 15px;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  min-height: 320px;
-  display: flex;
-  align-items: flex-end;
-  color: white;
-
-  @media(max-width: 615px) {
-    background-color: #0098FF;
-    padding: 5%;
-    height: 380px;
-    align-items: baseline;
-  }
+  ${({ theme }) => css`
+    align-items: flex-end;
+    background-image: url('https://svgshare.com/i/SNW.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: ${theme.colors.secondary};
+    display: flex;
+    min-height: 320px;
+    padding: ${theme.spacings.inside.small};
+    width: 100%;
+    ${mediaQuery.lessThan("mobile")`
+      align-items: baseline;
+      background-color: ${theme.colors.primary};
+      height: 380px;
+      padding: ${theme.spacings.inside.huge};
+    `}
+  `}
 `;
 
 export const Wrapper = styled.div`
@@ -26,17 +28,17 @@ export const Wrapper = styled.div`
   justify-content: space-evenly;
   margin-bottom: 30px;
   flex-wrap: wrap;
-  @media(max-width: 615px) {
+  ${mediaQuery.lessThan("mobile")`
     padding: 5%;
-  }
+  `}
 `;
 
 export const InfoBox = styled.div`
   display: flex;
   flex-direction: column;
-  @media(max-width: 615px) {
+  ${mediaQuery.lessThan("mobile")`
     width: 50%;
-  }
+  `}
 `
 
 export const Title = styled.h3`
@@ -44,9 +46,11 @@ export const Title = styled.h3`
 `;
 
 export const Line = styled.div`
+  ${({ theme }) => css`
   width: 35px;
   height: 5px;
-  background: white;
+  background: ${theme.colors.secondary};
+  `}
 `;
 
 export const ListInfo = styled.div`
@@ -56,14 +60,15 @@ export const ListInfo = styled.div`
 `;
 
 export const Itens = styled.a`
+  ${({ theme }) => css`
   text-decoration: none;
-  color: white;
-  font-weight: lighter;
+  color: ${theme.colors.secondary};
+  font-weight: ${theme.font.light};
   padding: 2% 0;
   list-style-position: outside;
-
+  transition: ${theme.transition.default};
   &:hover {
-    color: #ccc;
-    transition: 450ms;
+    color: ${theme.colors.textDark};
   }
+  `}
 `; 

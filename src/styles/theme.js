@@ -1,3 +1,5 @@
+ import { generateMedia } from 'styled-media-query';
+ 
  const theme = {
   font: {
     family: "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
@@ -61,9 +63,19 @@
       modal: 50,
       alwaysOnTop: 60,
     },
-
-  }
-
+  },
+  medias: {
+    desktop: '1100px',
+    tablet: '870px',
+    mobile: '615px'
+  },
 }
+
+export const mediaQuery = generateMedia({
+  desktop: theme.medias.desktop,
+  tablet: theme.medias.desktop,
+  mobile: theme.medias.mobile,
+})
+
 export default theme;
 

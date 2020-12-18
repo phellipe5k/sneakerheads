@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const WrapperSearchBar = styled.div`
   position: relative;
@@ -6,38 +6,40 @@ export const WrapperSearchBar = styled.div`
   width: 100%;
 
   #search-icon {
-    cursor: pointer;
-    color: #c4c4c4;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: 450ms;
-    width: 25px;
-    &:hover {
-    fill: #0098FF;
-    transition: 450ms;
-    }
+    ${({ theme }) => css`
+      cursor: pointer;
+      color: ${theme.colors.textLight};
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: ${theme.transition.default};
+      width: ${theme.icons.small};
+      &:hover {
+      fill: ${ theme.colors.primary };
+      }
+    `}
   }
 `;
 
 export const Bar = styled.input`
+  ${({ theme }) => css`
   background: none;
-  border-radius: 15px;
-  border: 2px solid #c4c4c4;
+  border-radius: ${theme.borderRadius.input};
+  border: ${theme.borderNoColor} ${theme.colors.textLight};
   height: 40px;
   outline: none;
   padding-left: 15px;
-  transition: 450ms;
+  transition: ${theme.transition.default};
   width: 100%;
-  color: white;
+  color: ${ theme.colors.secondary };
 
   &::placeholder {
-    color: #656565;
+    color: ${ theme.colors.textDark };
   }
 
   &:focus {
-    border-color: #0098FF;
-    transition: 450ms;
+    border-color: ${ theme.colors.primary };
   }
+  `}
 `;
