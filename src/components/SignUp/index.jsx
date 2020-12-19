@@ -21,7 +21,7 @@ const SignUp = () => {
         <Input type="password" icon={<Lock />} placeholder="Confirmar senha" />
       </S.FormWrapper>
       <Button>Cadastrar <Login width="20"/></Button>
-      <S.Call>Já tem uma conta? <Link href="/signin"><a>Entrar</a></Link></S.Call>
+      <S.Call>Já tem uma conta? <Link href="/sign-in"><a>Entrar</a></Link></S.Call>
     </S.Wrapper>
   )
 }
