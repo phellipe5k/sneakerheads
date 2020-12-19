@@ -1,10 +1,9 @@
-import Head from 'next/head';
-import HomePage from '../templates/Home';
+import SneakerList from '../components/SneakerList';
 
 export default function Sneakers({res}) {
   return (
-    <>
-    <HomePage />
-    </>
+    <div style={{background: '#ECECEC', height: '100vh'}}>
+    <SneakerList />
+    </div>
   )
 }
