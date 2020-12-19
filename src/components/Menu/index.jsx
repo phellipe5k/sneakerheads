@@ -17,7 +17,7 @@ const Menu = ({ logged }) => {
       </S.Left>
       <S.Right>
         <S.WrapperBar>
-            { router.pathname !== '/' && <HeaderSearchBar />  }
+            { router.pathname !== '/' && router.pathname!== '/sneakers' && <HeaderSearchBar />  }
         </S.WrapperBar>
         <S.WrapperUser>
           <User logged={ logged } />

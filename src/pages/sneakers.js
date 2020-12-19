@@ -1,9 +1,7 @@
-import SneakerList from '../components/SneakerList';
+import Sneakers from '../templates/Sneakers';
 
-export default function Sneakers({res}) {
+export default function SneakersPage({res}) {
   return (
-    <div style={{background: '#ECECEC', height: '100vh'}}>
-    <SneakerList />
-    </div>
+    <Sneakers />
   )
 }

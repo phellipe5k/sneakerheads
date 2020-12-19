@@ -3,11 +3,12 @@ import styled, { css } from 'styled-components';
 export const Wrapper = styled.div`
   ${({ theme, path }) => css`
     width: 100%;
-    padding: 2% 1.5%;
+    padding: 10%;
     border-radius: 46px;
     font-family: ${theme.font.family};
     background: white;
     color: ${theme.colors.textDark};
+    min-height: 350px;
 `}`;
 
 export const Content = styled.div`
