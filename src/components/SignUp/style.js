@@ -13,7 +13,8 @@ export const Title = styled.h3`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.xmedium};
     align-self: flex-start;
-    border-bottom: 5px solid ${theme.colors.primary};
+    border-left: 5px solid ${theme.colors.primary};
+    padding-left: 2%;
     margin: 3% 0;
     letter-spacing: 5px;
     font-weight: ${theme.font.normal};
