@@ -36,23 +36,29 @@ export const WrapperNavigationD = styled.nav`
 `;
 
 export const Linkers = styled.div`
-  ${({ theme }) => css`
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  ${({ path }) => {
-    return handlePath(theme, path);
-  }
-  }
-  a {
-    color: ${theme.colors.textLight};
-    font-size: ${theme.font.sizes.small};
-    font-weight: 400;
-    text-decoration: none;
-    transition: ${theme.transition.default};
-    &:hover {
-      color: ${theme.colors.primary}
-    }
-  }
-  `}
+  ${({ theme, path }) => {
+    return css`
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      ${({ path }) => {
+        return handlePath(theme, path);
+      }
+      }
+      a {
+        color: ${
+        path.pathname !== '/' 
+        ? theme.colors.textDark 
+        : theme.colors.textLight
+        };
+        font-size: ${theme.font.sizes.small};
+        font-weight: 400;
+        text-decoration: none;
+        transition: ${theme.transition.default};
+        &:hover {
+          color: ${theme.colors.primary}
+        }
+      }
+      `
+  }}
 `;

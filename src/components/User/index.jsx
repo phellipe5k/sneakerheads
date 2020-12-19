@@ -10,14 +10,17 @@ import { User as UserSolid } from '@styled-icons/boxicons-solid/User';
 import { SignInAlt } from '@styled-icons/fa-solid/SignInAlt';
 import { BookmarkStarFill } from '@styled-icons/bootstrap/BookmarkStarFill';
 import { DownArrow } from '@styled-icons/boxicons-solid/DownArrow';
+import { useRouter } from 'next/router';
 
 const User = ({ logged }) => {
   const [dropDownVisible, setDropDownVisible] = useState(false);
+  const route = useRouter();
   return logged
   ? (
-    <S.User>
+    <S.User path={route}>
       <S.Name
         visible={dropDownVisible}
+        path={route}
       >
       <UserIcon width="20" />
         João 

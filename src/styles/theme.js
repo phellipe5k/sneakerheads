@@ -29,6 +29,7 @@
     subLightBg: '#313131',
     darkBg: '#E2E2E2',
     subDarkBg: '#C4C4C4',
+    background: '#ECECEC'
   },
   borderNoColor: '2px solid',
   transition: {

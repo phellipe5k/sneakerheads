@@ -6,9 +6,13 @@ export const WrapperSearchBar = styled.div`
   width: 100%;
 
   #search-icon {
-    ${({ theme }) => css`
+    ${({ theme, path }) => css`
       cursor: pointer;
-      color: ${theme.colors.textLight};
+      color: ${
+        path.pathname !== '/' 
+        ? theme.colors.textDark 
+        : theme.colors.textLight
+      };
       position: absolute;
       right: 10px;
       top: 50%;
@@ -23,8 +27,9 @@ export const WrapperSearchBar = styled.div`
 `;
 
 export const Bar = styled.input`
-  ${({ theme }) => css`
+  ${({ theme, path }) => css`
   background: none;
+  font-family: ${theme.font.family};
   border-radius: ${theme.borderRadius.input};
   border: ${theme.borderNoColor} ${theme.colors.textLight};
   height: 40px;
@@ -32,7 +37,11 @@ export const Bar = styled.input`
   padding-left: 15px;
   transition: ${theme.transition.default};
   width: 100%;
-  color: ${ theme.colors.secondary };
+  color: ${
+    path.pathname !== '/' 
+    ? theme.colors.textDark 
+    : theme.colors.secondary
+    };;
 
   &::placeholder {
     color: ${ theme.colors.textDark };

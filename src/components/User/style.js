@@ -1,9 +1,13 @@
 import styled, { css } from 'styled-components';
 
 export const User = styled.div`
-  ${({ theme }) => css`
+  ${({ theme, path }) => css`
   align-items: center;
-  color: ${theme.colors.textLight};
+  color: ${
+    path.pathname !== '/' 
+    ? theme.colors.textDark 
+    : theme.colors.textLight
+    };
   display: flex;
   font-size: ${theme.font.sizes.xmedium};
   justify-content: space-between;
@@ -21,7 +25,7 @@ export const WrapDrop = styled.div`
 `;
 
 export const Name = styled.h5`
-  ${({ theme }) => css`
+  ${({ theme, path }) => css`
   cursor: pointer;
   display: flex;
   justify-content: space-evenly;
@@ -34,7 +38,11 @@ export const Name = styled.h5`
     margin-right: 5px;
     z-index: ${theme.layers.menu};
     ${({visible}) => css`
-    color: ${visible ? theme.colors.secondary : theme.colors.textLight };
+    color: ${
+    path.pathname !== '/' 
+    ? theme.colors.textDark 
+    : theme.colors.textLight
+    };
     &:hover {
       color: ${visible ? theme.colors.secondary : theme.colors.primary };
     }

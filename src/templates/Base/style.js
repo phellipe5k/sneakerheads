@@ -1,6 +1,12 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  ${({theme, path}) => {
+    return path !== '/' && css`
+    background-color: ${theme.colors.background};
+  `
+  }}
+`;
 
 export const WrapHeader = styled.div``;
 
