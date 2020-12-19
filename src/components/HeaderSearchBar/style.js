@@ -5,7 +5,7 @@ export const WrapperSearchBar = styled.div`
   display: inline-block;
   width: 100%;
 
-  .search-icon {
+  #search-icon {
     cursor: pointer;
     color: #c4c4c4;
     position: absolute;
@@ -25,11 +25,12 @@ export const Bar = styled.input`
   background: none;
   border-radius: 15px;
   border: 2px solid #c4c4c4;
-  height: 29px;
+  height: 40px;
   outline: none;
   padding-left: 15px;
   transition: 450ms;
   width: 100%;
+  color: white;
 
   &::placeholder {
     color: #656565;

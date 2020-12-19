@@ -1,4 +1,5 @@
 import * as S from './style';
+import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import Navigation from '../Navigation';
 import Logo from '../Logo';
@@ -7,6 +8,7 @@ import MenuMobile from '../MenuMobile';
 import HeaderSearchBar from '../HeaderSearchBar';
 
 const Menu = ({ logged }) => {
+  const router = useRouter();
   return (
     <S.Wrapper>
       <S.Left>
@@ -15,7 +17,7 @@ const Menu = ({ logged }) => {
       </S.Left>
       <S.Right>
         <S.WrapperBar>
-            <HeaderSearchBar />
+            { router.pathname !== '/' && <HeaderSearchBar />  }
         </S.WrapperBar>
         <S.WrapperUser>
           <User logged={ logged } />
