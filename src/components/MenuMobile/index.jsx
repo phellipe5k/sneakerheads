@@ -18,6 +18,9 @@ const MenuMobile = ({logged}) => {
     } else {
       disableScroll.off();
     }
+    return () => {
+      disableScroll.off();
+    };
   }, [menuMobile])
   const wishlist = 7;
   return (
@@ -38,14 +41,22 @@ const MenuMobile = ({logged}) => {
           logged
           ? (
             <S.Account>
-              <Button>Sair</Button>
+              <Link href="/">
+                <a>
+                  <Button >Sair</Button>
+                </a>
+              </Link>
             </S.Account>
           )
           : (
             <S.Account>
-              <Button >Entrar</Button>
+              <Link href="/sign-in">
+                <a>
+                  <Button >Entrar</Button>
+                </a>
+              </Link>
               <span>ou</span>
-              <a href="#">Crie sua conta</a>
+              <Link href="/sign-up"><a >Crie sua conta</a></Link>
             </S.Account>
           )
           }

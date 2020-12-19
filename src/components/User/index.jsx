@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useState } from 'react';
 import * as S from './style';
 import Navigation from '../Navigation';
@@ -36,7 +37,7 @@ const User = ({ logged }) => {
     </S.User>
   )
   : (
-   <Button styles="secondary">L O G I N</Button>
+   <Link href="/sign-in"><a><Button styles="secondary">L O G I N</Button></a></Link>
    )
 }
 

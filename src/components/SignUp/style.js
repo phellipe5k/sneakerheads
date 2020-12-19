@@ -30,8 +30,12 @@ export const Call = styled.div`
   ${({ theme }) => css`
   margin: 5%;
   a {
-    color: ${theme.colors.lightBg}
-  }
+    color: ${theme.colors.lightBg};
+    text-decoration: underline;
+    &:hover {
+      color: ${theme.colors.primary};
+    }
+    }
   `}
 `;
 

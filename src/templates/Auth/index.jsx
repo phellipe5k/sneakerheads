@@ -10,7 +10,10 @@ const Auth = () => {
       <S.Content>
         <S.Title>Find the Sneaker pair of your dreams</S.Title>
       </S.Content>
-      ${ router.pathname === '/sign-in' ? <SignIn /> : <SignUp /> }
+      <S.FormWrapper>
+      { router.pathname === '/sign-in' ? <SignIn /> : <SignUp /> } 
+      </S.FormWrapper> 
+      
     </S.Wrapper>
   )
 }

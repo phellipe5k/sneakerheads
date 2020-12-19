@@ -95,6 +95,11 @@ export const Account = styled.div`
     color: ${theme.colors.textDark};
     a {
       color: ${theme.colors.primary};
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
     }
   `}
 `;
