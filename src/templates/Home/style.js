@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-
+import styled, { css } from 'styled-components';
+import { mediaQuery } from '../../styles/theme';
 export const Background = styled.div`
-  background-image: url('https://wallpapercave.com/wp/wp6053187.jpg');
+  background-image: url('wallpaper.jpg');
   background-position: center;
   background-size: cover;
   height: 140vh;
@@ -25,53 +25,59 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  @media(max-width: 870px) {
+  ${mediaQuery.lessThan("tablet")`
     flex-direction: column;
     justify-content: center;
     height: 100%;
     padding: 7% 0;
-  }
+  `}
 `;
 
 export const Slogan = styled.h2`
+ ${({theme}) => css`
   color: #EAEAEA;
-  cursor: default;
-  font-size: 30pt;
-  width: 18%;
-  font-weight: 300;
-  height: 50%;
-  @media(max-width: 870px) {
-    width: 100%;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 100px;
-    font-size: 20pt;
-    height: fit-content;
-    order: 1;
-  }
+    cursor: default;
+    font-size: ${theme.font.sizes.subtitle};
+    font-weight: ${theme.font.light};
+    height: 50%;
+    width: 18%;
+    ${mediaQuery.lessThan('tablet')`
+      width: 100%;
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 100px;
+      font-size: ${theme.font.sizes.xmedium};
+      height: fit-content;
+      order: 1;
+    `}
+ `}
 `;
 
 export const Interact = styled.div`
-  color: #E9E9E9;
-  width: 30%;
-  height: 70%;
-  @media(max-width: 870px) {
-    width: 80%;
-    order: 0;
-    height: fit-content;
-  }
+  ${({theme}) => css`
+    color: ${theme.colors.textLight};
+    width: 30%;
+    height: 70%;
+    ${mediaQuery.lessThan('tablet')`
+      width: 80%;
+      order: 0;
+      height: fit-content;
+    `}
+  `}
 `;
 
 export const Title = styled.h1`
-  cursor: default;
-  font-size: 70pt;
-  letter-spacing: 10px;
-  margin-bottom: 25px;
-  text-align: center;
-  font-weight: 5 00;
-  @media(max-width: 870px) {
-    font-size: 50pt;
-  }
+  ${({theme }) => css`
+    cursor: default;
+    font-size: ${theme.font.sizes.title};
+    letter-spacing: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: ${theme.font.bold};
+    ${mediaQuery.lessThan('tablet')`
+      font-size: 50pt;
+    `}
+  `}
 `;
 
 export const Social = styled.div`
@@ -82,49 +88,49 @@ export const Social = styled.div`
   justify-content: space-around;
   position: relative;
   width: 20%;
-  z-index: 1;
-  @media(max-width: 870px) {
-    order: 2;
-    width: 100%;
-    height: fit-content;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
+  z-index: ${({theme}) => theme.layers.base};
+  ${mediaQuery.lessThan('tablet')`
+      order: 2;
+      width: 100%;
+      height: fit-content;
+      flex-direction: row;
+      justify-content: space-evenly;
+    `}
 `;
 export const Line = styled.div`
-  background-color: grey;
-  border-radius: 100%; 
-  height: 100%;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  width: 4px;
-  z-index: -1;
-  @media(max-width: 870px) {
-    width: 100%;
-    height: 4px;
-  }
+  ${({theme}) => css`
+    background-color: ${theme.colors.textDark};
+    border-radius: ${theme.borderRadius.rounded}; 
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 4px;
+    z-index: ${theme.layers.disappear};
+    ${mediaQuery.lessThan('tablet')`
+      width: 100%;
+      height: 4px;
+    `}
+  `}
 `;
 
 
 export const IconWrapper = styled.div`
-  background-color: white;
-  border-radius: 50%;
-  padding: 7px;
+  ${({ theme }) => css`
+  background-color: ${theme.colors.secondary};
+  border-radius: ${theme.borderRadius.rounded};
   cursor: pointer;
-  transition: 450ms;
-
+  padding: ${theme.spacings.inside.medium};
+  transition: ${theme.transition.default};
   svg {
-    fill: #0098FF;
+    fill: ${theme.colors.primary};
   }
-
   &:hover {
-    background-color: #0098FF;
-    transition: 450ms;
+    background-color: ${theme.colors.primary};
     transform: scale(1.1);
     svg {
-      fill: white;
-      transition: 450ms;
+      fill: ${theme.colors.secondary};
     }
   }
+  `}
 `;

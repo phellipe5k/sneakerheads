@@ -1,15 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import * as S from './style';
-import { MenuAlt1 } from '@styled-icons/heroicons-outline/MenuAlt1';
+import Button from '../Button';
 import Logo from '../Logo';
+import disableScroll from 'disable-scroll';
+import { MenuAlt1 } from '@styled-icons/heroicons-outline/MenuAlt1';
 import { Close } from '@styled-icons/evil/Close';
 import { BookmarkStarFill } from '@styled-icons/bootstrap/BookmarkStarFill';
-import Button from '../Button';
 
 const MenuMobile = ({logged}) => {
   const [menuMobile, setMenuMobile] = useState(false);
   const router = useRouter();
+  useEffect(() => {
+    if(menuMobile) {
+      disableScroll.on();
+    } else {
+      disableScroll.off();
+    }
+  }, [menuMobile])
   const wishlist = 7;
   return (
     <S.Wrapper>
@@ -19,11 +28,11 @@ const MenuMobile = ({logged}) => {
           width="45"
         />
         <S.Navigation path={ router }>
-          <a href="#" id="home" >Home</a>
-          <a href="#" id="sneakers">Sneakers</a>
-          <a href="#" id="brands">Brands</a>
-          <a href="#" id="stores">Stores</a>
-          {logged && <a href="#" id="perfil">Perfil</a>}
+          <Link href="/"><a id="home">Home</a></Link>
+          <Link href="/sneakers"><a id="sneakers">Sneakers</a></Link>
+          <Link href="/brands"><a id="brands">Brands</a></Link>
+          <Link href="/stores"><a id="stores">Stores</a></Link>
+          {logged && <Link href="/profile"><a id="perfil">Perfil</a></Link>}
         </S.Navigation>
           {
           logged
