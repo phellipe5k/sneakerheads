@@ -1,4 +1,6 @@
 import React from "react";
+import { ThemeProvider } from 'styled-components';
+import theme from '../../styles/theme';
 import Menu from '.';
 export default {
   title: 'Example/Menu',
@@ -8,7 +10,7 @@ export default {
   }
 };
 
-const Story = (args) => <Menu {...args} />;
+const Story = (args) => <ThemeProvider theme={theme}><Menu {...args} /></ThemeProvider>;
 
 export const Logged = Story.bind({});
 Logged.args = {

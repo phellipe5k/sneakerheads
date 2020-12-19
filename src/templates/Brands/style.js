@@ -20,12 +20,14 @@ ${({ theme }) => css`
   user-select: none;
   transition: ${theme.transition.fast};
   padding: 1% 2%;
-  width: 15%;
+  width: 12%;
   border-radius: ${theme.borderRadius.button};
   &:hover {
     cursor: pointer;
+    background-color: ${theme.colors.lightBg};
     img {
-      filter: grayscale(0);
+      filter: sepia(100%);
+      filter: contrast(300%);
       transform: scale(1.1);
     }
   }
@@ -38,11 +40,9 @@ ${({ theme }) => css`
 
 export const Image = styled.img`
   ${({ theme }) => css`
-      user-select: none;
+    user-select: none;
     transition: ${theme.transition.fast};
     width: 100%;
-    filter: grayscale(100%);
-
   `}
 `;
 

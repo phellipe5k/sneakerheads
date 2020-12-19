@@ -1,11 +1,13 @@
 import React from "react";
 import Button from '.';
+import { ThemeProvider } from 'styled-components';
+import theme from '../../styles/theme';
 export default {
   title: 'Example/Button',
   component: Button,
 };
 
-const Story = (args) => <Button {...args} />;
+const Story = (args) => <ThemeProvider theme={theme}><Button {...args} /></ThemeProvider>;
 
 export const Primary = Story.bind({});
 Primary.args = {

@@ -4,6 +4,7 @@ import { mediaQuery } from '../../styles/theme';
 export const Box = styled.div`
   ${({ theme }) => css`
     align-items: flex-end;
+    font-family: ${theme.font.family};
     background-image: url('https://svgshare.com/i/SNW.svg');
     background-position: bottom;
     background-repeat: no-repeat;

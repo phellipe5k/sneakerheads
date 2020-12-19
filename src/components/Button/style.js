@@ -20,6 +20,7 @@ ${({ size }) => css`
 
 export const Button = styled.button`
 ${({ theme, styles }) => css`
+  font-family: ${theme.font.family};
   width: 100%;
   cursor: pointer;
   padding: ${theme.spacings.inside.huge};

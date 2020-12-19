@@ -1,5 +1,8 @@
 import React from "react";
 import Footer from '.';
+import { ThemeProvider } from 'styled-components';
+import theme from '../../styles/theme';
+
 export default {
   title: 'Example/Footer',
   component: Footer,
@@ -8,7 +11,7 @@ export default {
   }
 };
 
-const Story = (args) => <Footer {...args} />;
+const Story = (args) => <ThemeProvider theme={theme}><Footer {...args} /></ThemeProvider>;
 
 export const Default = Story.bind({});
 Default.args = {
