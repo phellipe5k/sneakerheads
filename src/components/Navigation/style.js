@@ -1,35 +1,58 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const underLine = (theme, route) => {
+  return css`
+    #${route} {
+      position: relative;
+      ::after {
+        content: '';
+        background-color: ${theme.colors.primary};
+        width: 40%;
+        height: 4px;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+      }
+    } 
+    
+  `
+}
+
+const handlePath = (theme, path) => {
+  if (path) {
+    switch (path.pathname) {
+    case '/sneakers':
+      return underLine(theme, 'sneaker');
+    case '/brands':
+      return underLine(theme, 'brand');
+    case '/stores':
+      return underLine(theme, 'store');
+    }
+  }
+};
 
 export const WrapperNavigationD = styled.nav`
   width: 80%;
 `;
 
 export const Linkers = styled.div`
+  ${({ theme }) => css`
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   ${({ path }) => {
-    if (path) {
-      switch (path.pathname) {
-      case '/sneakers':
-        return css`#sneakers { border-bottom: 5px solid #0098FF } `;
-      case '/brands':
-        return css`#brands { border-bottom: 5px solid #0098FF }`;
-      case '/stores':
-        return css`#stores { border-bottom: 5px solid #0098FF }`;
-      }
-    }
+    return handlePath(theme, path);
   }
   }
   a {
-    font-size: 12pt;
-    color: #c4c4c4;
-    text-decoration: none;
-    transition: 450ms;
+    color: ${theme.colors.textLight};
+    font-size: ${theme.font.sizes.small};
     font-weight: 400;
+    text-decoration: none;
+    transition: ${theme.transition.default};
     &:hover {
-      color: #0098FF;
-    transition: 450ms;
+      color: ${theme.colors.primary}
     }
   }
+  `}
 `;

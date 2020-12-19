@@ -7,9 +7,9 @@ const Navigation = () => {
   return (
     <S.WrapperNavigationD>
       <S.Linkers path={ router }>
-        <a href="#" id="sneakers">Sneakers</a>
-        <a href="#" id="brands" >Brands</a>
-        <a href="#" id="stores">Stores</a>
+        <Link href="/sneakers"><a id="sneaker">Sneakers</a></Link>
+        <a href="#" id="brand" >Brands</a>
+        <a href="#" id="store">Stores</a>
         </S.Linkers>
     </S.WrapperNavigationD>
   )

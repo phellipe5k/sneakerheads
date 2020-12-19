@@ -1,96 +1,109 @@
 import styled, {css} from 'styled-components';
+import { mediaQuery } from '../../styles/theme';
+const createBorder = (theme, element) => {
+  return css`
+    #${element} {
+      border-bottom: 5px solid ${theme.colors.primary};
+    }
+  `
+}
+
+const handleRoute = (theme, path) => {
+  if (path) {
+      switch (path.pathname) {
+      case '/':
+        return createBorder(theme, 'home');
+      case '/sneakers':
+        return createBorder(theme, 'sneakers');
+      case '/brands':
+        return createBorder(theme, 'brands');
+      case '/stores':
+        return createBorder(theme, 'stores');
+      case '/perfil':
+        return createBorder(theme, 'perfil');
+    }
+  }
+}
+
 
 export const Wrapper = styled.div`
+  ${({ theme }) => css`
   display: none;
   width: 100%;
-  @media(max-width: 870px) {
-      display: flex;
-      width: 100%;
-      align-items: flex-start;
-      justify-content: space-between;
-      color: #c4c4c4;
-      #menu {
-        cursor: pointer;
-      }
-    }
-    padding: 0;
-    height: 100vh;
+  height: 100vh;
+  overflow-y: hidden;
+  ${
+  mediaQuery.lessThan("tablet")`
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: ${theme.colors.textLight};
+  `}
+  `}
 `;
 
 export const WrapperIcons = styled.div`
-display:flex;
-width: 100%;
-justify-content: space-between;
+  display:flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 4%;
 `;
-//absolute
 
 export const MenuMobileOn = styled.div`
-  position: absolute;
+${({theme, show}) => css`
+  position: fixed;
   width: 100%;
-  background-color: white;
-  height: 100vh;
+  background-color: ${theme.colors.secondary};
+  height: 100%;
+  padding: 0;
   display: flex;
-  ${({show}) => css`
-  transition: 650ms;
-  z-index: ${show ? '1' : '-1' };
-  opacity: ${show ? '1' : '0' };
-  `}
+  transition: ${theme.transition.slow};
+  z-index: ${show ? theme.layers.menu : theme.layers.disappear };
+  opacity: ${show ? theme.layers.menu : theme.layers.neutron };
   flex-direction: column;
   justify-content: space-between;
-  > svg {
-    cursor: pointer;
-  }
+  `}
 `;
 
 export const Navigation = styled.div`
+  ${({ theme, path }) => css`
   display: flex;
   flex-direction: column;
   align-items: center;
   a {
     margin: 20px 0;
-    color: #656565;
+    color: ${theme.colors.textDark};
     text-decoration: none;
-    font-size: 20pt;
-    font-weight: bold;
+    font-size: ${theme.font.sizes.xmedium};
+    font-weight: ${theme.font.bold};
   }
-  ${({ path }) => {
-    if (path) {
-      switch (path.pathname) {
-      case '/':
-        return css` #home { border-bottom: 5px solid #0098FF } `;
-      case '/sneakers':
-        return css`#sneakers { border-bottom: 5px solid #0098FF } `;
-      case '/brands':
-        return css`#brands { border-bottom: 5px solid #0098FF }`;
-      case '/stores':
-        return css`#stores { border-bottom: 5px solid #0098FF }`;
-      case '/perfil':
-        return css`#perfil { border-bottom: 5px solid #0098FF }`;
-    }
-  }
-    }
-    }
+  ${ handleRoute(theme, path) }
+  `}
 `;
 
 export const Account = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 100px;
-  margin-bottom: 30px;
-  color: #656565;
-  a {
-    color: #0098FF;
-  }
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100px;
+    margin-bottom: 30px;
+    color: ${theme.colors.textDark};
+    a {
+      color: ${theme.colors.primary};
+    }
+  `}
 `;
 
 export const Favorites = styled.div`
   display: flex;
   position: relative;
   align-items: center;
-  ${({existWish}) => {
+  ${({theme, existWish}) => {
     if (existWish) {
       return css`
         span {
@@ -100,11 +113,11 @@ export const Favorites = styled.div`
           position: absolute;
           top: 55%;
           right: 2%;
-          color: white;
+          color: ${theme.colors.secondary};
           width: 20px;
           height: 20px;
-          background-color: #0098ff;
-          z-index: 0;
+          background-color: ${theme.colors.primary};
+          z-index: ${theme.colors.neutron};
           border-radius: 50%;
           font-size: 8pt;
         }

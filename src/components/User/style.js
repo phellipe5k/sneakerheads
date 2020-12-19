@@ -1,77 +1,77 @@
 import styled, { css } from 'styled-components';
 
 export const User = styled.div`
+  ${({ theme }) => css`
   align-items: center;
-  color: #c4c4c4;
+  color: ${theme.colors.textLight};
   display: flex;
-  font-size: 20pt;
+  font-size: ${theme.font.sizes.xmedium};
   justify-content: space-between;
   width: 100%;
-  > svg {
-    transition: 450ms;
-    &:hover {
-      fill: #0098FF;
-      cursor: pointer;
-    }
+  > svg:hover {
+    cursor: pointer;
+    fill: ${theme.colors.primary};
+    transition: ${theme.transition.default};
   }
+  `}
 `;
 
 export const WrapDrop = styled.div`
-position: relative;
+  position: relative;
 `;
 
 export const Name = styled.h5`
+  ${({ theme }) => css`
   cursor: pointer;
   display: flex;
   justify-content: space-evenly;
-  padding: 3% 0;
-  transition: 450ms;
+  padding: ${theme.spacings.inside.huge} 0;
+  position: relative;
+  transition: ${theme.transition.default};
   width: 80%;
-  position:relative;
   #arrow-down {
-    transition: 450ms;
     position: relative;
     margin-right: 5px;
-    z-index: 3;
+    z-index: ${theme.layers.menu};
     ${({visible}) => css`
-    color: ${visible ? 'white' : '#c4c4c4' };
+    color: ${visible ? theme.colors.secondary : theme.colors.textLight };
     &:hover {
-      color: ${visible ? 'white' : '#0098ff' };
+      color: ${visible ? theme.colors.secondary : theme.colors.primary };
     }
     `}
-  }
+  }`}
 `;
 
 export const DropDown = styled.div`
-
-  background-color: #0098ff;
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  height: 100px;
-  justify-content: flex-end;
-  left: 50%;
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  transform: translateX(-50%);
-  transition: 450ms ease-in-out;
-  ${({visible}) => css`
-  z-index: ${visible ? '1' : '-1' };
-  opacity: ${visible ? '1' : '0' };
-  `}
-  // visibility: ${({visible}) => visible ? 'visible' : 'hidden'};
+  ${({theme, visible}) => css`
+    background-color: ${theme.colors.primary};
+    border-radius: ${theme.borderRadius.button};
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: flex-end;
+    left: 50%;
+    opacity: ${visible ? theme.layers.base : theme.layers.neutron };
+    padding: calc(${theme.spacings.inside.huge} * 3);
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    transition: ${theme.transition.default};
+    z-index: ${visible ? theme.layers.base : theme.layers.disappear };
+    `
+    }
   #user-solid, #sign-out {
-    color: white;
-    width: 25px;
-    border-radius: 50%;
-    margin-bottom: 15%;
-      transition: 450ms;
+    ${({ theme }) => css`
+    color: ${theme.colors.secondary};
+    padding: ${theme.spacings.inside.huge};
     cursor: pointer;
-    z-index: 2;
+    margin-bottom: 15%;
+    transition: ${theme.transition.default};
+    width: ${ theme.icons.medium };
+    z-index: ${theme.layers.dropDown};
     &:hover {
-      color: #656565;
-      transition: 450ms;
+      color: ${theme.colors.textDark};
     }
   }
+    `}
 `;
