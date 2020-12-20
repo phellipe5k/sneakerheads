@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   ${({ theme}) => css`
      width: 100%;
      padding: 5%;
+     color: ${theme.colors.textDark};
   `}
 `;
 
@@ -20,6 +21,7 @@ export const ChecksSection = styled.div`
 export const Title = styled.h5`
   ${({ theme }) => css`
     display: inline-block;
+    color: ${theme.colors.subLightBg};
     font-size: ${theme.font.sizes.xmedium};
     &:after {
       content:'';
@@ -31,19 +33,10 @@ export const Title = styled.h5`
     margin: 15px 0;
   `}
 `
-
-
-export const StoreSection = styled.div`
-  ${({ theme}) => css`
-     
-  `}
-`;
-
-
-export const BrandSection = styled.div`
-  ${({ theme}) => css`
-     
-  `}
+export const Image = styled.img`
+  width: 60px;
+  position: relative;
+  top: 10px;
 `;
 
 export const Division = styled.div`

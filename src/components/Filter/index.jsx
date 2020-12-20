@@ -50,68 +50,80 @@ const Filter = ({ children }) => {
       <S.ChecksSection>
         <S.Title>Store</S.Title>
         <Checkbox
-          id="0to50"
+          id="flightclub"
           onChange={ handleCheckBox }
         >
-          De R$0,00 a R$ 50,00
+          <S.Image src="images/flightclub.svg"/>
         </Checkbox>
         <Checkbox
-          id="0to100"
+          id="stockx"
           onChange={ handleCheckBox }
         >
-          Abaixo de R$100,00
+          <S.Image src="images/stockx.svg"/>
         </Checkbox>
         <Checkbox
-          id="0to150"
+          id="goat"
           onChange={ handleCheckBox }
         >
-          Abaixo de R$150,00
+          <S.Image src="images/goat.svg" />
         </Checkbox>
         <Checkbox
           id="0to200"
           onChange={ handleCheckBox }
         >
-          Abaixo de R$200,00
+          <S.Image src="images/stadiumgoods.svg" />
         </Checkbox>
       </S.ChecksSection>
       <S.Division/>
       <S.ChecksSection>
         <S.Title>Brands</S.Title>
         <Checkbox
-          id="0to50"
+          id="nike"
           onChange={ handleCheckBox }
         >
-          De R$0,00 a R$ 50,00
+          <S.Image src="images/nike.svg" />
         </Checkbox>
         <Checkbox
-          id="0to100"
+          id="jordan"
           onChange={ handleCheckBox }
         >
-          Abaixo de R$100,00
+          <S.Image src="images/jordan.svg" />
         </Checkbox>
         <Checkbox
-          id="0to150"
+          id="adidas"
           onChange={ handleCheckBox }
         >
-          Abaixo de R$150,00
+          <S.Image src="images/adidas.svg" />
         </Checkbox>
         <Checkbox
-          id="0to200"
+          id="vans"
           onChange={ handleCheckBox }
         >
-          Abaixo de R$200,00
+          <S.Image src="images/vans.svg" />
         </Checkbox>
         <Checkbox
-          id="free"
+          id="puma"
           onChange={ handleCheckBox }
         >
-          Gratuito
+          <S.Image src="images/puma.svg" />
         </Checkbox>
         <Checkbox
-          id="discount"
+          id="fila"
           onChange={ handleCheckBox }
         >
-          Com desconto
+          <S.Image src="images/fila.svg" />
+        </Checkbox>
+        <Checkbox
+          id="fila"
+          onChange={ handleCheckBox }
+        >
+          <S.Image src="images/new_balance.svg" />
+        </Checkbox>
+        <Checkbox
+          id="converse"
+          onChange={ handleCheckBox }
+        >
+          <S.Image src="images/converse.svg" />
         </Checkbox>
       </S.ChecksSection>
     </S.Wrapper>
