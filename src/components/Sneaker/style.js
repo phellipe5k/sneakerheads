@@ -2,6 +2,8 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
   ${({ theme, path }) => css`
+    transition: ${theme.transition.fast};
+    cursor: pointer;
     width: 100%;
     padding: 10%;
     border-radius: 46px;
@@ -9,6 +11,10 @@ export const Wrapper = styled.div`
     background: white;
     color: ${theme.colors.textDark};
     min-height: 350px;
+    &:hover {
+      box-shadow: -1px 2px 28px -11px rgba(0,0,0,0.35);
+      transform: scale(1.03);
+    }
 `}`;
 
 export const Content = styled.div`
