@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { mediaQuery } from '../../styles/theme';
 
 export const Wrapper = styled.div`
   ${({ theme, path }) => css`
@@ -15,4 +16,7 @@ export const SneakerWrapper = styled.div`
     width: 25%;
     min-width: 300px;
     margin: 2%;
+    ${mediaQuery.lessThan('mobile')`
+      min-width: 100%;
+    `}
 `}`;

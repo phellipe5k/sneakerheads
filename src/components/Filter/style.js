@@ -34,9 +34,9 @@ export const Title = styled.h5`
   `}
 `
 export const Image = styled.img`
-  width: 60px;
+  width: 40px;
   position: relative;
-  top: 10px;
+  top: 3px;
 `;
 
 export const Division = styled.div`

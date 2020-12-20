@@ -7,8 +7,9 @@ export const Wrapper = styled.div`
 
 export const LisWrapper = styled.div`
   ${({ theme, filterOn }) => css`
-  transition: ${theme.transition.default};
-  width: ${filterOn ? '75%' : '100%'};
+    transition: ${theme.transition.default};
+    width: ${filterOn ? '75%' : '100%'};
+    padding: 5%;
   `}
 `
 
@@ -23,6 +24,10 @@ export const InputContainer = styled.div`
   display: flex;
   width: 80%;
   justify-content: space-between;
+  ${mediaQuery.lessThan('tablet')`
+    width: 100%;
+    flex-wrap: wrap;
+  `}
 `
 
 
@@ -30,6 +35,10 @@ export const Filtering = styled.div`
   display: flex;
   width: 25%;
   justify-content: space-between;
+  ${mediaQuery.lessThan('tablet')`
+    width: 100%;
+    padding: 3%;
+  `}
 `;
 
 export const Button = styled.button`
@@ -52,6 +61,9 @@ export const Button = styled.button`
     &:hover {
       color: ${theme.colors.primary};
     }
+    ${mediaQuery.lessThan('tablet')`
+        order: 1;
+  `}
   `}
 `;
 
@@ -62,6 +74,11 @@ export const WrapperSearch = styled.div`
     width: 27%;
     position: relative;
     right: ${filterOn ? '7%' : '0' };
+    ${mediaQuery.lessThan('tablet')`
+      width: 100%;
+      right: 0;
+      padding: 3%;
+  `}
  `}
 `;
 
@@ -77,5 +94,7 @@ export const FilterWrapper = styled.div`
     width: ${filterOn ? '20%' : '0'};
     opacity: ${filterOn ? '1' : '0'};
     z-index: ${filterOn ? theme.layers.base : theme.layers.disappear };
+    position: relative;
+    left: 25px;
   `}
 `;

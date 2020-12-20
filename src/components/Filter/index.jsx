@@ -114,7 +114,7 @@ const Filter = ({ children }) => {
           <S.Image src="images/fila.svg" />
         </Checkbox>
         <Checkbox
-          id="fila"
+          id="new-balance"
           onChange={ handleCheckBox }
         >
           <S.Image src="images/new_balance.svg" />
