@@ -9,7 +9,9 @@ export const LisWrapper = styled.div`
   ${({ theme, filterOn }) => css`
     transition: ${theme.transition.default};
     width: ${filterOn ? '75%' : '100%'};
-    padding: 5%;
+    ${mediaQuery.lessThan('mobile')`
+       padding: 5%;
+  `}
   `}
 `
 
@@ -63,7 +65,16 @@ export const Button = styled.button`
     }
     ${mediaQuery.lessThan('tablet')`
         order: 1;
-  `}
+    `}
+    ${mediaQuery.lessThan('mobile')`
+        justify-content: flex-end;
+        width: 50px;
+      `}
+    span {
+      ${mediaQuery.lessThan('mobile')`
+        display: none;
+      `}
+    }
   `}
 `;
 

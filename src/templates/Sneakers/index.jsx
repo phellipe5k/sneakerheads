@@ -21,8 +21,8 @@ const Sneakers = () => {
               isFilter={filterOn}
               onClick={() => setFilterOn(!filterOn)}
             >
-              <FilterIcon width="30"/>
-              Filtrar
+              <FilterIcon id="filter-icon" width="30"/>
+              <span>Filtrar</span>
             </S.Button>
               <Select />
           </S.Filtering>
