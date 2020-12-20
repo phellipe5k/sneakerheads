@@ -28,8 +28,12 @@ const Sneaker = (item) => {
     }
   }
   const getLowestValue = (prices) => {
-    const lowest = Object.entries(prices).sort((a, b) => a[1] - b[1])[0];
+    if (prices) {
+      const lowest = Object.entries(prices).sort((a, b) => a[1] - b[1])[0];
     return lowest;
+    } else {
+      return ['null', retailPrice];
+    }
   }
 
   const getIconStore = () => {
@@ -43,6 +47,8 @@ const Sneaker = (item) => {
         return 'images/stadiumgoods.svg';
       case 'goat':
         return 'images/goat.svg';
+      default:
+        return 'null';
     }
   }
   return (
@@ -63,7 +69,7 @@ const Sneaker = (item) => {
           <S.Price>
             <S.SmallFont>Lowest Price</S.SmallFont>
             <span>$ {getLowestValue(lowestResellPrice)[1]}</span>
-            <S.Store>on <S.Image src={getIconStore()} /></S.Store>
+            <S.Store>on {getIconStore() !== 'null' ? <S.Image src={getIconStore()} /> : <span> retail</span>}</S.Store>
           </S.Price>
         </S.Info>
       </S.Content>
