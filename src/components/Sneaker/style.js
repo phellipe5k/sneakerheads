@@ -24,13 +24,34 @@ export const TopPart = styled.div`
 `}`;
 
 export const Favorite = styled.div`
-  ${({ theme, path }) => css`
+  ${({ theme, favorited }) => css`
     background: ${theme.colors.textLight};
-    padding: 2%;
     border-radius: ${theme.borderRadius.rounded};
     width: 38px;
-    svg {
+    cursor: pointer;
+    height: 38px;
+    position: relative;
+    #stroke {
+      transition: ${theme.transition.fast};
       color: ${theme.colors.secondary};
+      position: absolute;
+      width: 30px;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      z-index: ${favorited ? theme.layers.disappear : theme.layers.base };
+      opacity: ${favorited ? 0 : 1 };
+    }
+    #filled {
+      transition: ${theme.transition.fast};
+      color: ${theme.colors.primary};
+      position: absolute;
+      width: 30px;
+      top: 50%;
+      left: 50%;
+      opacity: ${!favorited ? 0 : 1 };
+      transform: translateY(-50%) translateX(-50%);
+      z-index: ${!favorited ? theme.layers.disappear : theme.layers.base };
     }
 `}`;
 

@@ -1,15 +1,18 @@
+import { useState } from 'react';
 import * as S from './style';
 import { Favorite, FavoriteBorder } from '@styled-icons/material';
 
 const Sneaker = (item) => {
   const { shoeName, brand, thumbnail, retailPrice } = item.item;
+  const [favorited, setFavorited] = useState(false);
   return (
     <S.Wrapper>
       <S.Content>
         <S.TopPart>
           <img src="https://svgshare.com/i/STk.svg"/>
-          <S.Favorite>
-            <FavoriteBorder />
+          <S.Favorite onClick={() => setFavorited(!favorited)} favorited={favorited}>
+            <FavoriteBorder id="stroke" />
+            <Favorite id="filled" />
           </S.Favorite>
         </S.TopPart>
         <S.ImageWrapper>
