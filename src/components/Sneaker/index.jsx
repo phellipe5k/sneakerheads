@@ -3,13 +3,53 @@ import * as S from './style';
 import { Favorite, FavoriteBorder } from '@styled-icons/material';
 
 const Sneaker = (item) => {
-  const { shoeName, brand, thumbnail, retailPrice } = item.item;
+  const { shoeName, brand, thumbnail, retailPrice, lowestResellPrice } = item.item;
   const [favorited, setFavorited] = useState(false);
+  const handleBrand = (brand) => {
+    switch (brand) {
+      case 'Nike':
+        return 'images/nike.svg';
+      case 'adidas':
+        return 'images/adidas.svg';
+      case 'Jordan':
+        return 'images/jordan.svg';
+      case 'Fila':
+        return 'images/fila.svg';
+      case 'Puma':
+        return 'images/puma.svg';
+      case 'Converse':
+        return 'images/converse.svg';
+      case 'Vans':
+        return 'images/vans.svg';
+      case 'New Balance':
+        return 'images/new_balance.svg';
+      default:
+        return '';
+    }
+  }
+  const getLowestValue = (prices) => {
+    const lowest = Object.entries(prices).sort((a, b) => a[1] - b[1])[0];
+    return lowest;
+  }
+
+  const getIconStore = () => {
+    const store = getLowestValue(lowestResellPrice)[0];
+    switch(store){
+      case 'stockX':
+        return 'images/stockx.svg';
+      case 'flightClub':
+        return 'images/flightclub.svg';
+      case 'stadiumGoods':
+        return 'images/stadiumgoods.svg';
+      case 'goat':
+        return 'images/goat.svg';
+    }
+  }
   return (
     <S.Wrapper>
       <S.Content>
         <S.TopPart>
-          <img src="https://svgshare.com/i/STk.svg"/>
+          <img src={ handleBrand(brand) }/>
           <S.Favorite onClick={() => setFavorited(!favorited)} favorited={favorited}>
             <FavoriteBorder id="stroke" />
             <Favorite id="filled" />
@@ -22,8 +62,8 @@ const Sneaker = (item) => {
           <S.Name>{shoeName}</S.Name>
           <S.Price>
             <S.SmallFont>Lowest Price</S.SmallFont>
-            <span>$ {retailPrice}</span>
-            <S.Store>on <S.Image src="https://svgshare.com/i/SQi.svg" /></S.Store>
+            <span>$ {getLowestValue(lowestResellPrice)[1]}</span>
+            <S.Store>on <S.Image src={getIconStore()} /></S.Store>
           </S.Price>
         </S.Info>
       </S.Content>

@@ -77,7 +77,7 @@ export const Info = styled.div`
 export const Name = styled.h3`
   ${({ theme, path }) => css`
     width: 53%;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     font-weight: ${theme.font.normal};
 `}`;
 
