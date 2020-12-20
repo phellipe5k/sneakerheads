@@ -8,7 +8,7 @@ import Select from '../../components/Select';
 import Filter from '../../components/Filter';
 import { Close } from '@styled-icons/evil/Close';
 
-const Sneakers = () => {
+const Sneakers = ({ sneaker }) => {
   const [filterOn, setFilterOn] = useState(false);
   return (
     <Base>
@@ -34,7 +34,7 @@ const Sneakers = () => {
             <Filter />
           </S.FilterWrapper>
           <S.LisWrapper filterOn={filterOn}>
-            <SneakerList />
+            <SneakerList sneaker={sneaker} />
           </S.LisWrapper>
         </S.ListContainer>
       </S.Container>
