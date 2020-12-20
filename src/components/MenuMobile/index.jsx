@@ -61,7 +61,7 @@ const MenuMobile = ({logged}) => {
           )
           }
       </S.MenuMobileOn>
-     <S.WrapperIcons>
+     <S.WrapperIcons path={router}>
       <MenuAlt1
           width="45"
           id="menu"

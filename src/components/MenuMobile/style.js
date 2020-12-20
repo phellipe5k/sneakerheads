@@ -45,10 +45,17 @@ export const Wrapper = styled.div`
 `;
 
 export const WrapperIcons = styled.div`
-  display:flex;
-  width: 100%;
-  justify-content: space-between;
-  padding: 0 4%;
+  ${({ theme, path }) => css`
+    display:flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 4%;
+    color: ${
+    path.pathname !== '/' 
+    ? theme.colors.textDark 
+    : theme.colors.textLight
+    };
+  `}
 `;
 
 export const MenuMobileOn = styled.div`

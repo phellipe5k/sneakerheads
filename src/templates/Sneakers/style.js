@@ -11,6 +11,7 @@ export const LisWrapper = styled.div`
     width: ${filterOn ? '75%' : '100%'};
     ${mediaQuery.lessThan('mobile')`
        padding: 5%;
+       display: ${filterOn ? 'none' : 'block'};
   `}
   `}
 `
@@ -107,5 +108,26 @@ export const FilterWrapper = styled.div`
     z-index: ${filterOn ? theme.layers.base : theme.layers.disappear };
     position: relative;
     left: 25px;
+    ${mediaQuery.lessThan('mobile')`
+        background: ${theme.colors.secondary};
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-heigth: 100vh;
+        width: 100%;
+        z-index: ${filterOn ? theme.layers.modal : theme.layers.disappear};
+     `};
   `}
+`;
+
+export const Close = styled.div`
+  display: none;
+  ${mediaQuery.lessThan('mobile')`
+    display: inline-block;
+    position: relative;
+    top: 20px;
+  `};
+  > svg {
+    color: ${({theme}) => theme.colors.textDark};
+  }
 `;

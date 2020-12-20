@@ -6,6 +6,7 @@ import HeaderSearchBar from '../../components/HeaderSearchBar';
 import { Filter as FilterIcon } from '@styled-icons/boxicons-regular/Filter';
 import Select from '../../components/Select';
 import Filter from '../../components/Filter';
+import { Close } from '@styled-icons/evil/Close';
 
 const Sneakers = () => {
   const [filterOn, setFilterOn] = useState(false);
@@ -29,6 +30,7 @@ const Sneakers = () => {
         </S.InputContainer>
         <S.ListContainer>
           <S.FilterWrapper filterOn={filterOn}>
+            <S.Close onClick={() => setFilterOn(!filterOn)}><Close width="50"/></S.Close>
             <Filter />
           </S.FilterWrapper>
           <S.LisWrapper filterOn={filterOn}>

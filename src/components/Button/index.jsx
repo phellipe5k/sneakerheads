@@ -1,10 +1,10 @@
 import * as S from './style';
 import PropTypes from 'prop-types';
 
-const Button = ({ styles, size, children  }) => {
+const Button = ({ styles, size, children, onClick  }) => {
   return (
     <S.Wrapper size={size}>
-      <S.Button type="button" styles={ styles }>{ children }</S.Button>
+      <S.Button onClick={ onClick } type="button" styles={ styles }>{ children }</S.Button>
     </S.Wrapper>
   ) 
 };
