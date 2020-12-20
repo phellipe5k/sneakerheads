@@ -29,7 +29,8 @@
     subLightBg: '#313131',
     darkBg: '#E2E2E2',
     subDarkBg: '#C4C4C4',
-    background: '#ECECEC'
+    background: '#ECECEC',
+    darkerPrimary: '#0E72B7'
   },
   borderNoColor: '2px solid',
   transition: {

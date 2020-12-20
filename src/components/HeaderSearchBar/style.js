@@ -51,6 +51,9 @@ export const Bar = styled.input`
     &:focus-within {
     opacity: 1;
     }
+    &:hover {
+      opacity: 1;
+    }
   `
   : css`
     background: none;

@@ -55,27 +55,6 @@ export const Button = styled.button`
   `}
 `;
 
-export const Select = styled.select`
-  ${({ theme }) => css`
-    transition: ${theme.transition.default};
-    font-family: ${theme.font.family};
-    padding: 2%;
-    color: ${theme.colors.secondary};
-    outline: none;
-    border-radius: ${theme.borderRadius.button};
-    background-color: ${theme.colors.primary};
-    border: ${theme.borderNoColor} ${theme.colors.secondary};
-    opacity: 0.6;
-    &:focus-within {
-      opacity: 1;
-    }
-    option {
-      background: ${theme.colors.secondary};
-      color: ${theme.colors.primary};
-    }
-  `}
-`;
-
 
 export const WrapperSearch = styled.div`
  ${({ theme, filterOn }) => css`
@@ -90,11 +69,13 @@ export const ListContainer = styled.div`
   display: flex;
   justify-content:space-evenly;
   width: 100%;
-  // flex-wrap: wrap;
 `
+
 export const FilterWrapper = styled.div`
   ${({ theme, filterOn }) => css`
     transition: ${theme.transition.default};
-    width: ${filterOn ? '20%' : '0'}
+    width: ${filterOn ? '20%' : '0'};
+    opacity: ${filterOn ? '1' : '0'};
+    z-index: ${filterOn ? theme.layers.base : theme.layers.disappear };
   `}
-`
+`;
