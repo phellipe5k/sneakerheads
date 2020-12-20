@@ -3,6 +3,8 @@ import { mediaQuery } from '../../styles/theme';
 
 export const Box = styled.div`
   ${({ theme }) => css`
+    position: relative;
+    z-index: 999;
     align-items: flex-end;
     font-family: ${theme.font.family};
     background-image: url('https://svgshare.com/i/SNW.svg');

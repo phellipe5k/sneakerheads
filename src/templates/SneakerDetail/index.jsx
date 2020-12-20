@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import * as S from './style';
 import Base from '../Base';
+import { Favorite, FavoriteBorder } from '@styled-icons/material';
 
 const SneakerDetail = ({ sneaker }) => {
+  const [favorited, setFavorited] = useState(false);
   console.log(sneaker)
   return (
     <Base>
@@ -16,7 +18,19 @@ const SneakerDetail = ({ sneaker }) => {
         <S.ShoesWrapper>
           <S.Shoes urls={sneaker.imageLinks[0]}></S.Shoes>
         </S.ShoesWrapper>
-        <S.Void></S.Void>
+        <S.Void>
+          <S.Info>
+            <S.Favorite onClick={() => setFavorited(!favorited)} favorited={favorited}>
+              <FavoriteBorder id="stroke" />
+              <Favorite id="filled" />
+            </S.Favorite>
+            <S.Title>{sneaker.shoeName}</S.Title>
+            <S.Colorway>Colorway - {sneaker.colorway}</S.Colorway>
+            <S.Release>Release Date: {sneaker.releaseDate}</S.Release>
+            <S.Retail>Retail Price: <span>$ {sneaker.retailPrice}</span></S.Retail>
+          </S.Info>
+
+        </S.Void>
         <svg width="1440" height="1033" viewBox="0 0 1440 1033" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 0996L1290.59 -76L1440 -60V1062L0 1046Z"/>
         </svg>

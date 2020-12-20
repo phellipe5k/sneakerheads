@@ -3,6 +3,8 @@ import { mediaQuery } from '../../styles/theme';
 
 
 export const Wrapper = styled.div`
+  position: relative;
+  z-index: 999;
   width: 100%;
   display: flex;
   justify-content: space-between;
