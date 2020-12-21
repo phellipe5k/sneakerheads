@@ -1,9 +1,11 @@
 import * as S from './style';
+import { useRouter } from 'next/router';
 import Menu from '../../components/Menu';
 
 const Footer = ({ children }) => {
+  const router = useRouter();
   return (
-    <S.Box>
+    <S.Box path={router.pathname}>
       <S.Wrapper>
         <S.InfoBox>
           <S.Title>

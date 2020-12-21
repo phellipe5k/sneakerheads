@@ -31,7 +31,8 @@
     darkBg: '#E2E2E2',
     subDarkBg: '#C4C4C4',
     background: '#ECECEC',
-    darkerPrimary: '#0E72B7'
+    darkerPrimary: '#0E72B7',
+    darkFooter: '#303030',
   },
   borderNoColor: '2px solid',
   transition: {

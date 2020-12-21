@@ -39,7 +39,14 @@ const SneakerDetail = ({ sneaker, colors, luminosity }) => {
             <S.Release>Release Date: {sneaker.releaseDate}</S.Release>
             <S.Retail>Retail Price: <span>$ {sneaker.retailPrice}</span></S.Retail>
           </S.Info>
+          <S.Sizes>
 
+          </S.Sizes>
+          <S.WrapDescription>
+            <S.Description>
+              { sneaker.description }
+            </S.Description>
+          </S.WrapDescription>
         </S.Void>
         <svg width="1440" height="1033" viewBox="0 0 1440 1033" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 0996L1290.59 -76L1440 -60V1062L0 1046Z"/>

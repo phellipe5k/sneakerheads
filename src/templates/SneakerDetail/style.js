@@ -77,7 +77,7 @@ export const ShoesWrapper = styled.div`
 
 export const Void = styled.div`
   ${({theme, luminosity}) => css`
-    color: ${luminosity === 'light1' || luminosity === 'light0' ? 'black' : 'white'};
+    color: ${luminosity === 'light1' || luminosity === 'light0' ? theme.colors.lightBg : theme.colors.darkBg};
     width: 40%;
     z-index: 10;
     display: flex;
@@ -108,7 +108,7 @@ export const Colorway = styled.h5`
 ${({theme, luminosity}) => css`
     font-size: ${theme.font.sizes.medium};
     margin: 2.5% 0;
-    color: ${luminosity === 'light1' || luminosity === 'light0' ? 'black' : 'white'};
+    color: ${luminosity === 'light1' || luminosity === 'light0' ? theme.colors.subLightBg : theme.colors.subDarkBg};
     // color: ${theme.colors.textLight};
     font-weight: ${theme.font.normal};
     width: 80%;
@@ -139,7 +139,7 @@ ${({theme}) => css`
 
 export const Favorite = styled.div`
   ${({ theme, favorited, luminosity }) => css`
-    border: 2px solid ${luminosity === 'light1' || luminosity === 'light0' ? 'black' : 'white'};
+    border: 2px solid ${luminosity === 'light1' || luminosity === 'light0' ? theme.colors.lightBg : theme.colors.darkBg};
     border-radius: ${theme.borderRadius.rounded};
     width: 38px;
     cursor: pointer;
@@ -147,7 +147,7 @@ export const Favorite = styled.div`
     position: relative;
     #stroke {
       transition: ${theme.transition.fast};
-      color: ${luminosity === 'light1' || luminosity === 'light0' ? 'black' : 'white'};
+      color: ${luminosity === 'light1' || luminosity === 'light0' ? theme.colors.lightBg : theme.colors.darkBg};
       // color: ${theme.colors.secondary};
       position: absolute;
       width: 23px;
@@ -159,8 +159,7 @@ export const Favorite = styled.div`
     }
     #filled {
       transition: ${theme.transition.fast};
-
-      color: ${luminosity === 'light1' || luminosity === 'light0' ? 'black' : 'white'};
+      color: ${luminosity === 'light1' || luminosity === 'light0' ? theme.colors.lightBg : theme.colors.darkBg};
       // color: ${theme.colors.secondary};
       position: absolute;
       width: 30px;
@@ -171,3 +170,13 @@ export const Favorite = styled.div`
       z-index: ${!favorited ? theme.layers.disappear : theme.layers.base };
     }
 `}`;
+
+export const Sizes = styled.div``;
+
+export const WrapDescription = styled.div`
+  width: 150%;
+  position: relative;
+  align-self: flex-end;
+`;
+
+export const Description = styled.p``;
