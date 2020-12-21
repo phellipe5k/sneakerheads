@@ -12,7 +12,7 @@
       small: '12pt',
       medium: '16pt',
       xmedium: '20pt',
-      large: '27pt',
+      large: '28pt',
       huge: '35pt',
     }
   },

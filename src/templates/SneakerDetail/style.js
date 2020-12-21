@@ -44,7 +44,7 @@ export const ImageGallery = styled.img`
 
 export const Shoes = styled.div`
   ${({theme, urls}) => css`
-    background-image: url("https://stockx.imgix.net/images/Air-Jordan-1-Retro-High-Travis-Scott-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1606319275");
+    background-image: url("${urls}");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -76,8 +76,8 @@ export const ShoesWrapper = styled.div`
 `
 
 export const Void = styled.div`
-  ${({theme}) => css`
-    color: white;
+  ${({theme, luminosity}) => css`
+    color: ${luminosity === 'light1' || luminosity === 'light0' ? 'black' : 'white'};
     width: 40%;
     z-index: 10;
     display: flex;
@@ -100,14 +100,16 @@ export const Info = styled.div`
 export const Title = styled.h2`
   ${({theme}) => css`
     font-size: ${theme.font.sizes.large};
+    font-weight: 400;
   `}
 `;
 
 export const Colorway = styled.h5`
-${({theme}) => css`
+${({theme, luminosity}) => css`
     font-size: ${theme.font.sizes.medium};
     margin: 2.5% 0;
-    color: ${theme.colors.textLight};
+    color: ${luminosity === 'light1' || luminosity === 'light0' ? 'black' : 'white'};
+    // color: ${theme.colors.textLight};
     font-weight: ${theme.font.normal};
     width: 80%;
   `}
@@ -136,8 +138,8 @@ ${({theme}) => css`
 
 
 export const Favorite = styled.div`
-  ${({ theme, favorited }) => css`
-    border: 2px solid ${theme.colors.textLight};
+  ${({ theme, favorited, luminosity }) => css`
+    border: 2px solid ${luminosity === 'light1' || luminosity === 'light0' ? 'black' : 'white'};
     border-radius: ${theme.borderRadius.rounded};
     width: 38px;
     cursor: pointer;
@@ -145,7 +147,8 @@ export const Favorite = styled.div`
     position: relative;
     #stroke {
       transition: ${theme.transition.fast};
-      color: ${theme.colors.secondary};
+      color: ${luminosity === 'light1' || luminosity === 'light0' ? 'black' : 'white'};
+      // color: ${theme.colors.secondary};
       position: absolute;
       width: 23px;
       top: 50%;
@@ -156,7 +159,9 @@ export const Favorite = styled.div`
     }
     #filled {
       transition: ${theme.transition.fast};
-      color: ${theme.colors.secondary};
+
+      color: ${luminosity === 'light1' || luminosity === 'light0' ? 'black' : 'white'};
+      // color: ${theme.colors.secondary};
       position: absolute;
       width: 30px;
       top: 50%;
