@@ -4,7 +4,6 @@ import useImageColor from 'use-image-color'
 
 export default function SneakerDetailPage({ data }) {
   const { colors } = useImageColor(data.thumbnail, { cors: true, colors: 5 });
-  colors && console.log(colors[0], colors[1])
   const luminosity = () => {
     if(colors) {
       const hex = colors[1];
@@ -25,7 +24,6 @@ export default function SneakerDetailPage({ data }) {
       return luminosidade >=128 ? 'light1' : 'dark1';
     }
   }
-  console.log(colors, luminosity());
   return (
     <>
     <SneakerDetail sneaker={ data } colors={colors} luminosity={luminosity()} />

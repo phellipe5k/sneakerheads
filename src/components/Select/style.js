@@ -1,16 +1,17 @@
 import styled, { css } from 'styled-components';
 
 export const Select = styled.select`
-  ${({ theme }) => css`
-    width: 55%;
+  ${({ theme, secondary }) => css`
+    width: ${secondary ? '100%' : '55%'};
     cursor: pointer;
+    ${secondary ? 'font-size: 20pt' : ''};
     transition: ${theme.transition.default};
     font-family: ${theme.font.family};
-    padding: 2%;
+    padding:  ${secondary ? '7% 18%' : '2%'};
     color: ${theme.colors.secondary};
     outline: none;
-    border-radius: ${theme.borderRadius.button};
-    background-color: ${theme.colors.primary};
+    border-radius: ${secondary ? '5px' : theme.borderRadius.button};;
+    background-color: ${secondary ? 'transparent' : theme.colors.primary};
     border: ${theme.borderNoColor} ${theme.colors.secondary};
     opacity: 0.6;
     &:hover {
@@ -20,7 +21,8 @@ export const Select = styled.select`
       opacity: 1;
     }
     option {
-      background: ${theme.colors.secondary};
+      ${secondary ? 'font-size: 12pt' : ''};
+      background-color: ${secondary ? 'transparent' : theme.colors.secondary};
       color: ${theme.colors.primary};
     }
     appearance: none;
@@ -30,3 +32,4 @@ export const Select = styled.select`
 
   `}
 `;
+

@@ -5,30 +5,32 @@ import media from 'styled-media-query';
 export const Container = styled.div`
   ${({theme, color}) => css`
     width: 100%;
-    height: 100vh;
+    height: 700px;
     display: flex;
-    > svg {
+    #background {
       position: absolute;
       top: 0;
       right: -20px;
+      path {
+        fill: ${color};
+      }
+      circle {
+        stroke: ${color};
+      }
       // z-index: -1;
     }
-    > svg path {
-      fill: ${color};
-    }
     ${media.lessThan('huge')`
-      > svg {
+    #background {
       right: -60px;
       }
     `}
     ${media.lessThan('1300px')`
-      > svg {
+    #background {
       right: -80px;
       }
     `}
   `}
 `;
-
 
 export const ImagesGallery = styled.div`
   display: flex;
@@ -83,6 +85,9 @@ export const Void = styled.div`
     display: flex;
     flex-direction: column;
     padding: 3% 2%;
+    justify-content: space-around;
+    position: relative;
+    height: 800px;
   `}
 `;
 
@@ -94,6 +99,15 @@ export const Info = styled.div`
   text-align: right;
   align-items: flex-end;
   width: 75%;
+  height: 300px;
+  ${media.lessThan('huge')`
+      right: 80px;
+    `}
+
+  ${media.lessThan('1100px')`
+     
+      }
+    `}
 `;
 
 
@@ -170,13 +184,73 @@ export const Favorite = styled.div`
       z-index: ${!favorited ? theme.layers.disappear : theme.layers.base };
     }
 `}`;
-
-export const Sizes = styled.div``;
+export const WrapSizes = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 170%;
+  align-self: flex-end;
+  height: 20px;
+  ${media.lessThan('1350px')`
+      width: 200%;
+    `}
+    ${media.lessThan('1100px')`
+      width: 250%;
+    `}
+  `;
+export const WrapSelect = styled.div`
+  width: 15%;
+`
+export const Sizes = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 70%;
+  top: -170px;
+  h3 {
+    font-size: 24pt;
+    margin: 2% 0;
+    font-weight: 400;
+    margin: 2% 0;
+  }
+`;
 
 export const WrapDescription = styled.div`
   width: 150%;
   position: relative;
   align-self: flex-end;
+  ${media.lessThan('1350px')`
+      width: 180%;
+    `}
+    ${media.lessThan('1100px')`
+      width: 200%;
+    `}
 `;
 
-export const Description = styled.p``;
+export const Description = styled.p`
+  font-weight: lighter;
+  font-size: 13pt;
+`;
+
+export const Stores = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 5% 0;
+`;
+
+export const Boxes = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+`;
+
+export const Logos = styled.img`
+  width: 100px;
+`;
+
+export const Prices = styled.h5`
+  font-size: 20pt;
+  font-weight: 400;
+`;

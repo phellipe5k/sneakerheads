@@ -25,7 +25,14 @@ const Sneakers = ({ sneaker }) => {
               <FilterIcon id="filter-icon" width="30"/>
               <span>Filtrar</span>
             </S.Button>
-              <Select />
+              <Select>
+                <option value="" hidden>Ordenar</option>
+                <option value="highest-price">Menor preço</option>
+                <option value="lowest-price">Maior preço</option>
+                <option value="name">Nome</option>
+                <option value="release-date">Data de lançamento</option>
+                <option value="relevance">Relevância</option>
+              </Select>
           </S.Filtering>
         </S.InputContainer>
         <S.ListContainer>

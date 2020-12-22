@@ -1,89 +1,71 @@
-export default // 20201221115747
-// https://sneakers-api-app.herokuapp.com/id/CD0461-100/prices
+export default // 20201221214655
+// http://sneakers-api-app.herokuapp.com/id/883232-441/prices
 
 {
   "lowestResellPrice": {
-    "stockX": 284,
-    "flightClub": 260,
-    "goat": 269,
-    "stadiumGoods": 335
+    "stockX": 250,
+    "flightClub": 275,
+    "goat": 275,
+    "stadiumGoods": 410
   },
   "resellPrices": {
     "goat": {
-      "5": 300,
-      "6": 296,
-      "7": 300,
-      "8": 325,
-      "9": 293,
-      "10": 290,
-      "11": 313,
-      "12": 335,
-      "5.5": 269,
-      "6.5": 302,
-      "7.5": 300,
-      "8.5": 260,
-      "9.5": 291,
-      "10.5": 313,
-      "11.5": 320
+      "4": 275,
+      "5": 367,
+      "6": 400,
+      "7": 600,
+      "8": 319,
+      "9": 380,
+      "10": 360,
+      "11": 300,
+      "12": 320,
+      "4.5": 365,
+      "5.5": 416,
+      "7.5": 532,
+      "8.5": 520,
+      "9.5": 325,
+      "10.5": 320,
+      "11.5": 340
     },
     "stockX": {
-      "5": 300,
-      "6": 301,
-      "7": 305,
-      "8": 318,
-      "9": 286,
-      "10": 299,
-      "11": 309,
-      "12": 325,
-      "5.5": 294,
-      "6.5": 302,
-      "7.5": 305,
-      "8.5": 318,
-      "9.5": 284,
-      "10.5": 305,
-      "11.5": 327
+      "6": 350,
+      "7": 548,
+      "8": 319,
+      "9": 302,
+      "10": 300,
+      "11": 269,
+      "12": 250,
+      "13": 280,
+      "7.5": 350,
+      "8.5": 451,
+      "9.5": 290,
+      "10.5": 290,
+      "11.5": 265
     },
     "stadiumGoods": {
-      "5": 350,
-      "6": 365,
-      "7": 375,
-      "8": 360,
-      "9": 370,
-      "10": 349,
-      "11": 390,
-      "12": 380,
-      "5.5": 335,
-      "6.5": 365,
-      "7.5": 385,
-      "8.5": 399,
-      "9.5": 355,
-      "10.5": 410,
-      "11.5": 459
+      "8": 420,
+      "13": 410
     }
   },
   "imageLinks": [
-    "https://image.goat.com/attachments/product_template_additional_pictures/images/046/018/242/medium/555195_01.jpg.jpeg?1606248096",
-    "https://image.goat.com/attachments/product_template_additional_pictures/images/046/018/244/medium/555195_03.jpg.jpeg?1606248096",
-    "https://image.goat.com/attachments/product_template_additional_pictures/images/046/018/240/medium/555195_06.jpg.jpeg?1606248096",
-    "https://image.goat.com/attachments/product_template_additional_pictures/images/046/018/238/medium/555195_08.jpg.jpeg?1606248096",
-    "https://image.goat.com/attachments/product_template_additional_pictures/images/046/018/243/medium/555195_04.jpg.jpeg?1606248096"
+    
   ],
-  "_id": "5fe0b7ea7e05e2001797be8f",
-  "shoeName": "Jordan 1 Retro High Tie Dye (W)",
-  "brand": "Jordan",
-  "silhoutte": "Jordan 1 Retro High",
-  "styleID": "CD0461-100",
-  "make": "Jordan 1 Retro High",
-  "colorway": "White/Black-Aurora Green",
-  "retailPrice": 170,
-  "thumbnail": "https://stockx.imgix.net/images/Air-Jordan-1-Retro-High-Tie-Dye-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1606319746",
-  "releaseDate": "2020-06-26",
-  "description": "The Wmns Air Jordan 1 Retro High OG 'Tie-Dye' brings a faux hand-dyed effect to its classic basketball construction. A women's shoe, the upper is built with a white leather base, with black leather on the collar and toe box. The overlays define the look, while underfoot, a classic midsole houses Air for cushioning, with a concentric outsole for traction.",
-  "urlKey": "air-jordan-1-retro-high-tie-dye-w",
+  "_id": "5fe141fd6c6f4b0017bbefe3",
+  "shoeName": "Nike SB Dunk Low Rivals Pack (East)",
+  "brand": "Nike",
+  "silhoutte": "Nike SB Dunk Low",
+  "styleID": "883232-441",
+  "make": "Nike SB Dunk Low",
+  "colorway": "Binary Blue/White-Gum Light Brown",
+  "retailPrice": 100,
+  "thumbnail": "https://stockx.imgix.net/images/Nike-SB-Dunk-Low-East-West-Pack-Biggie-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1608515691",
+  "releaseDate": "2018-05-12",
+  "description": "Drawing inspiration from the fashions worn by rappers of the 90s, the Nike SB Dunk Low TRD QS 'East West Pack' boasts a denim upper with a raw-edged Swoosh and stitching reminiscent of jeans. The brass-tone eyelets, embroidered gold laurel wreath, and gum sole also share the same color story. And completing the look is a plaid interior.",
+  "urlKey": "nike-sb-dunk-low-east-west-pack-biggie",
   "resellLinks": {
-    "stockX": "https://stockx.com/air-jordan-1-retro-high-tie-dye-w",
-    "flightClub": "https://www.flightclub.com/wmns-air-jordan-1-retro-high-og-white-black-aurora-green-157965",
-    "goat": "http://www.goat.com/sneakers/wmns-air-jordan-1-retro-high-og-aurora-cd0461-100",
-    "stadiumGoods": "https://www.stadiumgoods.com/air-jordan-1-retro-high-og-wmn-tie-dye-cd0461-100"
+    "stockX": "https://stockx.com/nike-sb-dunk-low-east-west-pack-biggie",
+    "flightClub": "https://www.flightclub.com/nike-sb-dunk-low-trd-qs-denim-803913",
+    "goat": "http://www.goat.com/sneakers/sb-dunk-low-trd-qs-883232-441",
+    "stadiumGoods": "https://www.stadiumgoods.com/nike-sb-dunk-low-trd-qs-biggie-883232-441"
   }
 }
