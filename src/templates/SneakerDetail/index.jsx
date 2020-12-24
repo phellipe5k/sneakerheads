@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import * as S from './style';
 import Base from '../Base';
+import ImagesGallery from '../../components/ImagesGallery';
 import { Favorite, FavoriteBorder } from '@styled-icons/material';
 import Select from '../../components/Select';
 import Adidas from './icons/adidas';
@@ -61,12 +62,9 @@ const handleBrand = (brand) => {
   return (
     <Base>
       <S.Container color={decide()}>
-        <S.ImagesGallery>
-          <S.ImageGallery src={sneaker.imageLinks[1]} />
-          <S.ImageGallery src={sneaker.imageLinks[2]} />
-          <S.ImageGallery src={sneaker.imageLinks[3]} />
-          <S.ImageGallery src={sneaker.imageLinks[4]} />
-        </S.ImagesGallery>
+        <S.WrapImagesGallery>
+          <ImagesGallery sneaker={sneaker} />
+        </S.WrapImagesGallery>
         <S.ShoesWrapper>
           <S.Shoes urls={sneaker.thumbnail}></S.Shoes>
         </S.ShoesWrapper>

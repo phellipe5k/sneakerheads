@@ -1,71 +1,91 @@
-export default // 20201221214655
-// http://sneakers-api-app.herokuapp.com/id/883232-441/prices
+export default // 20201223231053
+// https://sneakers-api-app.herokuapp.com/id/CJ0939-100/prices
 
 {
   "lowestResellPrice": {
-    "stockX": 250,
-    "flightClub": 275,
-    "goat": 275,
-    "stadiumGoods": 410
+    "stockX": 170,
+    "flightClub": 160,
+    "goat": 173,
+    "stadiumGoods": 220
   },
   "resellPrices": {
     "goat": {
-      "4": 275,
-      "5": 367,
-      "6": 400,
-      "7": 600,
-      "8": 319,
-      "9": 380,
-      "10": 360,
-      "11": 300,
-      "12": 320,
-      "4.5": 365,
-      "5.5": 416,
-      "7.5": 532,
-      "8.5": 520,
-      "9.5": 325,
-      "10.5": 320,
-      "11.5": 340
+      "4": 532,
+      "5": 456,
+      "6": 195,
+      "7": 365,
+      "8": 239,
+      "9": 277,
+      "10": 160,
+      "11": 165,
+      "12": 175,
+      "13": 200,
+      "14": 208,
+      "3.5": 290,
+      "4.5": 280,
+      "5.5": 225,
+      "6.5": 279,
+      "7.5": 346,
+      "8.5": 210,
+      "9.5": 220,
+      "10.5": 160,
+      "11.5": 197,
+      "12.5": 260
     },
     "stockX": {
-      "6": 350,
-      "7": 548,
-      "8": 319,
-      "9": 302,
-      "10": 300,
-      "11": 269,
-      "12": 250,
-      "13": 280,
-      "7.5": 350,
-      "8.5": 451,
-      "9.5": 290,
-      "10.5": 290,
-      "11.5": 265
+      "6": 275,
+      "7": 350,
+      "8": 230,
+      "9": 244,
+      "10": 200,
+      "11": 170,
+      "12": 184,
+      "13": 220,
+      "14": 179,
+      "15": 241,
+      "4.5": 298,
+      "6.5": 274,
+      "7.5": 250,
+      "8.5": 220,
+      "9.5": 224,
+      "10.5": 183,
+      "11.5": 195,
+      "12.5": 323
     },
     "stadiumGoods": {
-      "8": 420,
-      "13": 410
+      "10": 245,
+      "11": 220,
+      "12": 309,
+      "14": 410,
+      "15": 409,
+      "9.5": 315,
+      "10.5": 220,
+      "11.5": 245
     }
   },
   "imageLinks": [
-    
+    "https://image.goat.com/attachments/product_template_additional_pictures/images/020/249/083/medium/485840_01.jpg.jpeg?1554318216",
+    "https://image.goat.com/attachments/product_template_additional_pictures/images/020/249/089/medium/485840_03.jpg.jpeg?1554318220",
+    "https://image.goat.com/attachments/product_template_additional_pictures/images/020/249/072/medium/485840_06.jpg.jpeg?1554318203",
+    "https://image.goat.com/attachments/product_template_additional_pictures/images/020/249/062/medium/485840_08.jpg.jpeg?1554318192",
+    "https://image.goat.com/attachments/product_template_additional_pictures/images/020/249/073/medium/485840_04.jpg.jpeg?1554318204"
   ],
-  "_id": "5fe141fd6c6f4b0017bbefe3",
-  "shoeName": "Nike SB Dunk Low Rivals Pack (East)",
-  "brand": "Nike",
-  "silhoutte": "Nike SB Dunk Low",
-  "styleID": "883232-441",
-  "make": "Nike SB Dunk Low",
-  "colorway": "Binary Blue/White-Gum Light Brown",
-  "retailPrice": 100,
-  "thumbnail": "https://stockx.imgix.net/images/Nike-SB-Dunk-Low-East-West-Pack-Biggie-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1608515691",
-  "releaseDate": "2018-05-12",
-  "description": "Drawing inspiration from the fashions worn by rappers of the 90s, the Nike SB Dunk Low TRD QS 'East West Pack' boasts a denim upper with a raw-edged Swoosh and stitching reminiscent of jeans. The brass-tone eyelets, embroidered gold laurel wreath, and gum sole also share the same color story. And completing the look is a plaid interior.",
-  "urlKey": "nike-sb-dunk-low-east-west-pack-biggie",
+  "_id": "5fe3f8acb5b1680017afcca6",
+  "shoeName": "Jordan 3 Retro Tinker White University Red",
+  "brand": "Jordan",
+  "silhoutte": "Jordan 3 Retro",
+  "styleID": "CJ0939-100",
+  "make": "Jordan 3 Retro",
+  "colorway": "White/University Red-Neutral Grey",
+  "retailPrice": 225,
+  "thumbnail": "https://stockx.imgix.net/images/Air-Jordan-3-Retro-Tinker-White-University-Red-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1606315680",
+  "releaseDate": "2019-03-30",
+  "description": "Based on Tinker Hatfield's original sketches of the 1988 silhouette, the Air Jordan 3 Retro Tinker 'Air Max 1' emerges with an updated build. The shoe's upper is built with leather, sporting perforated detailing on the eyestay and collar and University Red suede on the mudguard. The lateral-side Swoosh can swapped out for a customizable look, while the inside of the tongue includes Tinker Hatfield's signature. Underfoot, the classic midsole houses visible Air in the heel for cushioning.",
+  "urlKey": "air-jordan-3-retro-tinker-white-university-red",
   "resellLinks": {
-    "stockX": "https://stockx.com/nike-sb-dunk-low-east-west-pack-biggie",
-    "flightClub": "https://www.flightclub.com/nike-sb-dunk-low-trd-qs-denim-803913",
-    "goat": "http://www.goat.com/sneakers/sb-dunk-low-trd-qs-883232-441",
-    "stadiumGoods": "https://www.stadiumgoods.com/nike-sb-dunk-low-trd-qs-biggie-883232-441"
+    "stockX": "https://stockx.com/air-jordan-3-retro-tinker-white-university-red",
+    "flightClub": "https://www.flightclub.com/air-jordan-3-retro-tinker-white-university-red-neutral-grey-137356",
+    "goat": "http://www.goat.com/sneakers/air-jordan-3-retro-sp-tinker-katrina-cj0939-100",
+    "stadiumGoods": "https://www.stadiumgoods.com/air-jordan-3-retro-tinker-air-max-1-university-red-cj0939-100"
   }
 }

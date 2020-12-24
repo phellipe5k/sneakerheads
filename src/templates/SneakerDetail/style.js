@@ -32,17 +32,10 @@ export const Container = styled.div`
   `}
 `;
 
-export const ImagesGallery = styled.div`
-  display: flex;
-  flex-direction: column;
+export const WrapImagesGallery = styled.div`
   width: 15%;
-  position: relative;
-  z-index: 999;
 `;
 
-export const ImageGallery = styled.img`
-  width: 100%;
-`;
 
 export const Shoes = styled.div`
   ${({theme, urls}) => css`
