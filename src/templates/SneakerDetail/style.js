@@ -29,11 +29,22 @@ export const Container = styled.div`
       right: -80px;
       }
     `}
+    ${media.lessThan('950px')`
+    #background {
+      right: -100%;
+      top: 15%;
+      }
+      height: 1050px;
+      flex-wrap: wrap;
+    `}
   `}
 `;
 
 export const WrapImagesGallery = styled.div`
   width: 15%;
+  ${media.lessThan('950px')`
+    width: 20%;
+  `}
 `;
 
 
@@ -61,6 +72,11 @@ export const Shoes = styled.div`
       right: 70px;
       top: -90px;
     `}
+    ${media.lessThan('950px')`
+    top: -50px;
+    right: 0;
+    left: -50px;
+  `}
   `}
 `;
 export const ShoesWrapper = styled.div`
@@ -68,6 +84,9 @@ export const ShoesWrapper = styled.div`
   // background: blue;
   position: relative;
   height: 480px;
+  ${media.lessThan('950px')`
+    width: 80%;
+  `}
 `
 
 export const Void = styled.div`
@@ -81,6 +100,10 @@ export const Void = styled.div`
     justify-content: space-around;
     position: relative;
     height: 800px;
+    ${media.lessThan('950px')`
+    width: 100%;
+    top: -100px;
+  `}
   `}
 `;
 
@@ -101,6 +124,11 @@ export const Info = styled.div`
      
       }
     `}
+    ${media.lessThan('950px')`
+    width: 100%;
+    align-content: flex-start;
+    height: 300px;
+  `}
 `;
 
 
@@ -108,6 +136,10 @@ export const Title = styled.h2`
   ${({theme}) => css`
     font-size: ${theme.font.sizes.large};
     font-weight: 400;
+    ${media.lessThan('950px')`
+    width: 70%;
+    font-size: ${theme.font.sizes.medium};
+  `}
   `}
 `;
 
@@ -119,6 +151,10 @@ ${({theme, luminosity}) => css`
     // color: ${theme.colors.textLight};
     font-weight: ${theme.font.normal};
     width: 80%;
+    ${media.lessThan('950px')`
+    width: 100%;
+    font-size: ${theme.font.sizes.small};
+  `}
   `}
 `;
 
@@ -128,6 +164,10 @@ ${({theme}) => css`
     font-size: ${theme.font.sizes.medium};
     margin: 2.5% 0;
     font-weight: ${theme.font.normal};
+    ${media.lessThan('950px')`
+    width: 100%;
+    font-size: ${theme.font.sizes.small};
+  `}
   `}
 `;
 
@@ -140,6 +180,13 @@ ${({theme}) => css`
     span {
       font-size: ${theme.font.sizes.xmedium}
     }
+    ${media.lessThan('950px')`
+    width: 100%;
+    font-size: ${theme.font.sizes.small};
+    span {
+      font-size: ${theme.font.sizes.medium}
+    }
+  `}
   `}`;
 
 
@@ -189,9 +236,15 @@ export const WrapSizes = styled.div`
     ${media.lessThan('1100px')`
       width: 250%;
     `}
+    ${media.lessThan('950px')`
+    width: 100%;
+  `}
   `;
 export const WrapSelect = styled.div`
   width: 15%;
+  ${media.lessThan('950px')`
+  width: 22%;
+`}
 `
 export const Sizes = styled.div`
   display: flex;
@@ -206,6 +259,9 @@ export const Sizes = styled.div`
     font-weight: 400;
     margin: 2% 0;
   }
+  ${media.lessThan('950px')`
+  width: 100%;
+`}
 `;
 
 export const WrapDescription = styled.div`
@@ -247,3 +303,6 @@ export const Prices = styled.h5`
   font-size: 20pt;
   font-weight: 400;
 `;
+
+
+// 950 px

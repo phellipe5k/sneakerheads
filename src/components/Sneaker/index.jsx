@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 import * as S from './style';
 import { Favorite, FavoriteBorder } from '@styled-icons/material';
 
@@ -52,28 +53,33 @@ const Sneaker = (item) => {
     }
   }
   return (
-    <S.Wrapper>
-      <S.Content>
-        <S.TopPart>
-          <img src={ handleBrand(brand) }/>
-          <S.Favorite onClick={() => setFavorited(!favorited)} favorited={favorited}>
-            <FavoriteBorder id="stroke" />
-            <Favorite id="filled" />
-          </S.Favorite>
-        </S.TopPart>
-        <S.ImageWrapper>
-          <S.Image src={thumbnail} />
-        </S.ImageWrapper>
-        <S.Info>
-          <S.Name>{shoeName}</S.Name>
-          <S.Price>
-            <S.SmallFont>Lowest Price</S.SmallFont>
-            <span>$ {getLowestValue(lowestResellPrice)[1]}</span>
-            <S.Store>on {getIconStore() !== 'null' ? <S.Image src={getIconStore()} /> : <span> retail</span>}</S.Store>
-          </S.Price>
-        </S.Info>
-      </S.Content>
-    </S.Wrapper>
+    <Link href="/sneakers/BV1310-555">
+      <a>
+      <S.Wrapper>
+        <S.Content>
+          <S.TopPart>
+            <img src={ handleBrand(brand) }/>
+            <S.Favorite onClick={() => setFavorited(!favorited)} favorited={favorited}>
+              <FavoriteBorder id="stroke" />
+              <Favorite id="filled" />
+            </S.Favorite>
+          </S.TopPart>
+          <S.ImageWrapper>
+            <S.Image src={thumbnail} />
+          </S.ImageWrapper>
+          <S.Info>
+            <S.Name>{shoeName}</S.Name>
+            <S.Price>
+              <S.SmallFont>Lowest Price</S.SmallFont>
+              <span>$ {getLowestValue(lowestResellPrice)[1]}</span>
+              <S.Store>on {getIconStore() !== 'null' ? <S.Image src={getIconStore()} /> : <span> retail</span>}</S.Store>
+            </S.Price>
+          </S.Info>
+        </S.Content>
+      </S.Wrapper>
+      </a>
+    </Link>
+    
   )
 }
 

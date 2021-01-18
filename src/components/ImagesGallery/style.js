@@ -9,6 +9,8 @@ export const ImagesGallery = styled.div`
   width: 100%;
   position: relative;
   z-index: 999;
+  ${media.lessThan('950px')`
+  `}
 `;
 
 export const ImageGallery = styled.img`
