@@ -78,7 +78,7 @@ export default // 20201223231053
   "make": "Jordan 3 Retro",
   "colorway": "White/University Red-Neutral Grey",
   "retailPrice": 225,
-  "thumbnail": "https://stockx.imgix.net/images/Air-Jordan-3-Retro-Tinker-White-University-Red-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1606315680",
+  "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRabuvT9dLt07qcMlxHpX9v0ZWrOrbGjANkOw&usqp=CAU",
   "releaseDate": "2019-03-30",
   "description": "Based on Tinker Hatfield's original sketches of the 1988 silhouette, the Air Jordan 3 Retro Tinker 'Air Max 1' emerges with an updated build. The shoe's upper is built with leather, sporting perforated detailing on the eyestay and collar and University Red suede on the mudguard. The lateral-side Swoosh can swapped out for a customizable look, while the inside of the tongue includes Tinker Hatfield's signature. Underfoot, the classic midsole houses visible Air in the heel for cushioning.",
   "urlKey": "air-jordan-3-retro-tinker-white-university-red",
