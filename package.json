@@ -5,13 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "start": "next start"
   },
   "dependencies": {
-    "color-thief": "^2.2.5",
-    "color-thief-react": "^2.0.11",
+    "axios": "^0.21.1",
     "disable-scroll": "^0.6.0",
     "dominant-color": "0.0.1",
     "eslint": "^7.15.0",
@@ -29,10 +26,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
-    "@storybook/addon-actions": "^6.1.11",
-    "@storybook/addon-essentials": "^6.1.11",
-    "@storybook/addon-links": "^6.1.11",
-    "@storybook/react": "^6.1.11",
     "babel-loader": "^8.2.2"
   }
 }

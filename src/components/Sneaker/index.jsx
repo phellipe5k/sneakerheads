@@ -4,7 +4,7 @@ import * as S from './style';
 import { Favorite, FavoriteBorder } from '@styled-icons/material';
 
 const Sneaker = (item) => {
-  const { shoeName, brand, thumbnail, retailPrice, lowestResellPrice } = item.item;
+  const { shoeName, brand, thumbnail, retailPrice, lowestResellPrice, _id, styleID } = item.item;
   const [favorited, setFavorited] = useState(false);
   const handleBrand = (brand) => {
     switch (brand) {
@@ -53,7 +53,7 @@ const Sneaker = (item) => {
     }
   }
   return (
-    <Link href="/sneakers/BV1310-555">
+    <Link href="/sneakers/[id]" as={ `/sneakers/${styleID }`}>
       <a>
       <S.Wrapper>
         <S.Content>

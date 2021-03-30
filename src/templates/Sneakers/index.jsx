@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as S from './style';
 import Base from '../Base';
 import SneakerList from '../../components/SneakerList';
+import Axios from 'axios';
 import HeaderSearchBar from '../../components/HeaderSearchBar';
 import { Filter as FilterIcon } from '@styled-icons/boxicons-regular/Filter';
 import Select from '../../components/Select';
@@ -10,12 +11,17 @@ import { Close } from '@styled-icons/evil/Close';
 
 const Sneakers = ({ sneaker }) => {
   const [filterOn, setFilterOn] = useState(false);
+  const [data, setData] = useState(sneaker);
+  const handleInput = async ({ target }) => {
+    const { data } = await Axios.get(`https://sneakers-api-app.herokuapp.com/search/${ target.value }`);
+    setData(data);
+  };
   return (
     <Base>
       <S.Container isFilter={filterOn}>
         <S.InputContainer isFilter={filterOn}>
           <S.WrapperSearch filterOn={filterOn}>
-            <HeaderSearchBar type="secondary" />
+            <HeaderSearchBar type="secondary" onChange={ handleInput } />
           </S.WrapperSearch>
           <S.Filtering>
             <S.Button
@@ -41,7 +47,7 @@ const Sneakers = ({ sneaker }) => {
             <Filter />
           </S.FilterWrapper>
           <S.LisWrapper filterOn={filterOn}>
-            <SneakerList sneaker={sneaker} />
+            <SneakerList sneaker={data} />
           </S.LisWrapper>
         </S.ListContainer>
       </S.Container>
