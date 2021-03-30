@@ -288,7 +288,7 @@ export const Stores = styled.div`
   margin: 5% 0;
 `;
 
-export const Boxes = styled.div`
+export const Boxes = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;

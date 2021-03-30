@@ -16,6 +16,12 @@ import NewBalance from './icons/newBalance';
 const SneakerDetail = ({ sneaker, colors, luminosity }) => {
   const [selectedSize, setSelectedSize] = useState('');
   const [favorited, setFavorited] = useState(false);
+  const {
+    stockX: stockxLink,
+    flightClub: flightClubLink,
+    goat: goatLink,
+    stadiumGoods: stadiumGoodsLink,
+  } = sneaker.resellLinks;
 const handleBrand = (brand) => {
     switch (brand) {
       case 'Nike':
@@ -84,26 +90,26 @@ const handleBrand = (brand) => {
               <h3>Choose your size</h3>
              <S.WrapSelect>
               <Select secondary onChange={({target}) => setSelectedSize(target.value)}>
-                {Object.keys(sneaker.resellPrices.stockX).sort((a, b) => a - b).map(size => <option value={size} >{size}</option>)}
+                {Object.keys(sneaker.resellPrices.stockX).sort((a, b) => a - b).map((size, index) => <option value={size} key={ index } >{size}</option>)}
                 </Select>
              </S.WrapSelect>
               <S.Stores>
-                <S.Boxes>
+                <S.Boxes href={ `${stockxLink}?size=${ selectedSize }` } target="_blank">
                   <S.Prices>{validateNumber('stockX')}</S.Prices>
                   <span>on</span>
                   <S.Logos src="https://svgshare.com/i/SWp.svg" />
                 </S.Boxes>
-                <S.Boxes>
+                <S.Boxes href={ `${flightClubLink}` } target="_blank">
                 <S.Prices>{validateNumber('flightClub')}</S.Prices>
                   <span>on</span>
                   <S.Logos src="https://svgshare.com/i/SWL.svg" />
                 </S.Boxes>
-                <S.Boxes>
+                <S.Boxes href={ `${goatLink}` } target="_blank">
                 <S.Prices>{validateNumber('goat')}</S.Prices>
                   <span>on</span>
                   <S.Logos src="https://svgshare.com/i/SWZ.svg" />
                 </S.Boxes>
-                <S.Boxes>
+                <S.Boxes href={ `${stadiumGoodsLink}` } target="_blank">
                 <S.Prices>{validateNumber('stadiumGoods')}</S.Prices>
                   <span>on</span>
                   <S.Logos src="https://svgshare.com/i/SY6.svg" />
@@ -120,7 +126,7 @@ const handleBrand = (brand) => {
 
         <svg id="background" width="1440" height="1033" viewBox="0 0 1440 1033" fill="none" xmlns="http://www.w3.org/2000/svg">
          <path d="M0 0996L1290.59 -76L1440 -60V1062L0 1046Z"/>
-        <circle r="38.5" transform="matrix(1 0 0 -1 870 288)" fill="white" stroke="#3F3932" stroke-width="5"/>
+        <circle r="38.5" transform="matrix(1 0 0 -1 870 288)" fill="white" stroke="#3F3932" strokeWidth="5"/>
         {handleBrand(sneaker.brand)}
       </svg>
       </S.Container>

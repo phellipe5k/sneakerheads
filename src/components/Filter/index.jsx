@@ -2,7 +2,6 @@ import * as S from './style';
 import Checkbox from '../Checkbox';
 const Filter = ({ children }) => {
   const handleCheckBox = (target) => {
-    console.log(target.checked)
   };
 
   return (

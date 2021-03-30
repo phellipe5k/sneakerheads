@@ -7,7 +7,7 @@ const Logo = ({ size }) => (
   <Link href="/">
     <a>
       <S.Wrapper>
-        <S.Image src="logo.png" size={ size } />
+        <S.Image src="/logo.png" size={ size } />
       </S.Wrapper>
     </a>
   </Link>

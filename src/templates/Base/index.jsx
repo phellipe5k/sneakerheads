@@ -5,8 +5,6 @@ import Footer from '../../components/Footer';
 
 const Base = ({ children }) => {
   const router = useRouter();
-
-  console.log(router.pathname);
   return (
     <S.Container path={ router.pathname }>
       <S.WrapHeader>
