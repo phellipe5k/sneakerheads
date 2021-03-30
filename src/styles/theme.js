@@ -63,7 +63,7 @@
     },
   },
   layers: {
-    disappear: -10,
+    disappear: -90,
     neutron: 0,
     base: 10,
     dropDown: 20,

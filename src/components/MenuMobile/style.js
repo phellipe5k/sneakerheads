@@ -65,7 +65,7 @@ ${({theme, show}) => css`
   background-color: ${theme.colors.secondary};
   height: 100%;
   padding: 0;
-  display: flex;
+  display: ${show ? 'flex' : 'none' };
   transition: ${theme.transition.slow};
   z-index: ${show ? theme.layers.menu : theme.layers.disappear };
   opacity: ${show ? theme.layers.menu : theme.layers.neutron };

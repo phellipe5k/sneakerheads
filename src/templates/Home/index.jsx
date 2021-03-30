@@ -1,9 +1,13 @@
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 import * as S from './style';
 import Base from '../Base';
 import HeaderSearchBar from '../../components/HeaderSearchBar';
 import { Twitter, Instagram, Github } from '@styled-icons/boxicons-logos';
 
 const Home = () => {
+  const router = useRouter();
+  const [input, setInput] = useState('');
   return (
     <Base>
     <S.Background />
@@ -16,7 +20,11 @@ const Home = () => {
           <S.Title>
             Sneaker Heads
           </S.Title>
-          <HeaderSearchBar />
+          <HeaderSearchBar
+            value={ input }
+            onChange={ ({ target }) => setInput(target.value) }
+            onClick={ () => router.push(`/sneakers?search=${ input }`) }
+          />
         </S.Interact>
         <S.Social>
           <S.Line />
