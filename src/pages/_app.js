@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider  theme={theme}>
         <Head>
           <title>SneakerHeads</title>
+          <meta name="viewport" content="width=device-width, minimum-scale=1.0"></meta>
         </Head>
         <GlobalStyle />
         <Component {...pageProps} />

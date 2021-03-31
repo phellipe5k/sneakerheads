@@ -9,14 +9,16 @@ export default function SneakersPage({ data }) {
 }
 
 export async function getServerSideProps(context) {
+
+  const url = 'https://sneakers-api-app.herokuapp.com';
   if (context.query.search) {
     const { search } = context.query;
-    const { data } = await Axios.get(`https://sneakers-api-app.herokuapp.com/search/${search}`);
+    const { data } = await Axios.get(`${url}/search/${search}`);
     return {
       props: { data }, // will be passed to the page component as props
     }
   }
-  const { data } = await Axios.get('https://sneakers-api-app.herokuapp.com/home');
+  const { data } = await Axios.get(`${url}/home`);
   return {
     props: { data }, // will be passed to the page component as props
   }

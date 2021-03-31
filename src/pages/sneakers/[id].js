@@ -50,7 +50,8 @@ export async function getStaticPaths() {
 
 export async function getServerSideProps(context) {
   const { id } = context.query;
-  const { data } = await Axios.get(`https://sneakers-api-app.herokuapp.com/id/${ id }/prices`)
+  const url = 'https://sneakers-api-app.herokuapp.com';
+  const { data } = await Axios.get(`${url}/id/${ id }/prices`)
   return {
     props: { data }, // will be passed to the page component as props
   }

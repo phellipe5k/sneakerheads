@@ -37,6 +37,14 @@ export const Container = styled.div`
       height: 1050px;
       flex-wrap: wrap;
     `}
+    ${media.lessThan('430px')`
+    #background {
+      right: -100%;
+      top: 30%;
+      }
+      height: 1100px;
+      flex-wrap: wrap;
+    `}
   `}
 `;
 
@@ -44,6 +52,15 @@ export const WrapImagesGallery = styled.div`
   width: 15%;
   ${media.lessThan('950px')`
     width: 20%;
+  `}
+  ${media.lessThan('430px')`
+    width: 100%;
+    > div {
+      flex-direction: row;
+      > img {
+        width: 25%;
+      }
+    }
   `}
 `;
 
@@ -77,6 +94,10 @@ export const Shoes = styled.div`
     right: 0;
     left: -50px;
   `}
+    ${media.lessThan('430px')`
+      left: -10px;
+      top: -80px;
+    `}
   `}
 `;
 export const ShoesWrapper = styled.div`
@@ -103,6 +124,10 @@ export const Void = styled.div`
     ${media.lessThan('950px')`
     width: 100%;
     top: -100px;
+  `}
+  ${media.lessThan('420px')` 
+    padding: 7%;
+    top: -170px;
   `}
   `}
 `;
@@ -244,7 +269,14 @@ export const WrapSelect = styled.div`
   width: 15%;
   ${media.lessThan('950px')`
   width: 22%;
-`}
+  `}
+  ${media.lessThan('420px')`
+  width: 35%;
+  margin-bottom: 20px;
+  > div {
+    padding: 2%;
+  }
+  `}
 `
 export const Sizes = styled.div`
   display: flex;
@@ -262,6 +294,9 @@ export const Sizes = styled.div`
   ${media.lessThan('950px')`
   width: 100%;
 `}
+${media.lessThan('420px')`
+  top: -190px;
+  `}
 `;
 
 export const WrapDescription = styled.div`
@@ -279,6 +314,9 @@ export const WrapDescription = styled.div`
 export const Description = styled.p`
   font-weight: lighter;
   font-size: 13pt;
+  ${media.lessThan('420px')` 
+    display: none;
+  `}
 `;
 
 export const Stores = styled.div`
@@ -286,6 +324,12 @@ export const Stores = styled.div`
   justify-content: space-between;
   width: 80%;
   margin: 5% 0;
+  ${media.lessThan('950px')`
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  `}
 `;
 
 export const Boxes = styled.a`
@@ -293,6 +337,11 @@ export const Boxes = styled.a`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  ${media.lessThan('950px')`
+  width: 50%;
+  flex-direction: column;
+  margin: 0;
+  `}
 `;
 
 export const Logos = styled.img`

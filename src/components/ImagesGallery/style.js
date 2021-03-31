@@ -8,9 +8,7 @@ export const ImagesGallery = styled.div`
   flex-direction: column;
   width: 100%;
   position: relative;
-  z-index: 999;
-  ${media.lessThan('950px')`
-  `}
+  z-index: 10;
 `;
 
 export const ImageGallery = styled.img`
