@@ -40,7 +40,7 @@ export const Container = styled.div`
     ${media.lessThan('430px')`
     #background {
       right: -100%;
-      top: 30%;
+      top: 45%;
       }
       height: 1100px;
       flex-wrap: wrap;

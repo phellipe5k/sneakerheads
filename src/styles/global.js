@@ -35,10 +35,14 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
+  html, body, .__next {
     font-family: 'Poppins' sans-serif;
-    overflow-x: hidden;
   }
+  @media screen and (max-width: 425px) {
+    body {
+        // overflow: hidden !important;
+    }
+}
 `;
 
 export default GlobalStyle;

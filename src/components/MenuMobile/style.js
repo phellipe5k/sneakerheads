@@ -31,7 +31,6 @@ export const Wrapper = styled.div`
   display: none;
   width: 100%;
   height: 100vh;
-  overflow-y: hidden;
   ${
   mediaQuery.lessThan("tablet")`
     display: flex;
@@ -50,6 +49,8 @@ export const WrapperIcons = styled.div`
     width: 100%;
     justify-content: space-between;
     padding: 0 4%;
+
+    overflow-y: hidden;
     color: ${
     path.pathname !== '/' 
     ? theme.colors.textDark 
