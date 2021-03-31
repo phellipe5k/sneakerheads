@@ -59,6 +59,7 @@ export const WrapImagesGallery = styled.div`
       flex-direction: row;
       > img {
         width: 25%;
+        height: 70px;
       }
     }
   `}
