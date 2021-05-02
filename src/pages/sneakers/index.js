@@ -1,10 +1,13 @@
 import Sneakers from '../../templates/Sneakers';
 import mock from '../../components/Sneaker/mock';
+import { motion } from 'framer-motion';
 import Axios from 'axios';
 
 export default function SneakersPage({ data }) {
   return (
+    <motion.div exit={{opacity: 0}} initial="initial" animate="animate">
     <Sneakers sneaker={ data } />
+    </motion.div>
   )
 }
 

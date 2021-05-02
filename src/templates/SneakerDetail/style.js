@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 import { mediaQuery } from '../../styles/theme';
 import media from 'styled-media-query';
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   ${({theme, color}) => css`
     width: 100%;
     height: 700px;
@@ -48,7 +49,7 @@ export const Container = styled.div`
   `}
 `;
 
-export const WrapImagesGallery = styled.div`
+export const WrapImagesGallery = styled(motion.div)`
   width: 15%;
   ${media.lessThan('950px')`
     width: 20%;
@@ -101,7 +102,7 @@ export const Shoes = styled.div`
     `}
   `}
 `;
-export const ShoesWrapper = styled.div`
+export const ShoesWrapper = styled(motion.div)`
   width: 45%;
   // background: blue;
   position: relative;
@@ -111,7 +112,7 @@ export const ShoesWrapper = styled.div`
   `}
 `
 
-export const Void = styled.div`
+export const Void = styled(motion.div)`
   ${({theme, luminosity}) => css`
     color: ${luminosity === 'light1' || luminosity === 'light0' ? theme.colors.lightBg : theme.colors.darkBg};
     width: 40%;

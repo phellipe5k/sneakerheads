@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 const Base = ({ children }) => {
   const router = useRouter();
   return (
-    <S.Container path={ router.pathname }>
+    <S.Container path={ router.pathname } exit={{opacity: 0}}>
       <S.WrapHeader>
         <Menu logged />
       </S.WrapHeader>

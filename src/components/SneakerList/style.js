@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
 import { mediaQuery } from '../../styles/theme';
+import { motion } from 'framer-motion';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
   ${({ theme, path }) => css`
     display: flex;
     // min-width: 980px;
@@ -11,7 +12,7 @@ export const Wrapper = styled.div`
 `}`;
 
 
-export const SneakerWrapper = styled.div`
+export const SneakerWrapper = styled(motion.div)`
   ${({ theme, path }) => css`
     width: 25%;
     min-width: 300px;

@@ -7,6 +7,7 @@ import HeaderSearchBar from '../../components/HeaderSearchBar';
 import { Filter as FilterIcon } from '@styled-icons/boxicons-regular/Filter';
 import Select from '../../components/Select';
 import Filter from '../../components/Filter';
+import { stagger, hoverScale, tapScale } from '../../Animations';
 import { Close } from '@styled-icons/evil/Close';
 
 const Sneakers = ({ sneaker }) => {
@@ -18,7 +19,7 @@ const Sneakers = ({ sneaker }) => {
   };
   return (
     <Base>
-      <S.Container isFilter={filterOn}>
+      <S.Container isFilter={filterOn} exit={{opacity: 0}} initial="initial" animate="animate">
         <S.InputContainer isFilter={filterOn}>
           <S.WrapperSearch filterOn={filterOn}>
             <HeaderSearchBar type="secondary" onChange={ handleInput } />
@@ -42,7 +43,7 @@ const Sneakers = ({ sneaker }) => {
           </S.Filtering>
         </S.InputContainer>
         <S.ListContainer>
-          <S.FilterWrapper filterOn={filterOn}>
+          <S.FilterWrapper filterOn={filterOn} variants={ stagger }>
             <S.Close onClick={() => setFilterOn(!filterOn)}><Close width="50"/></S.Close>
             <Filter />
           </S.FilterWrapper>

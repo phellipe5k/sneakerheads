@@ -2,6 +2,7 @@ import Head from 'next/head';
 import '../styles/globals.css';
 import Provider from '../Provider/Provider';
 import GlobalStyle from '../styles/global';
+import { AnimatePresence } from "framer-motion"; 
 import { ThemeProvider } from 'styled-components';
 import theme from '../styles/theme';
 
@@ -18,7 +19,9 @@ function MyApp({ Component, pageProps }) {
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
         </Head>
         <GlobalStyle />
-        <Component {...pageProps} />
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} />
+        </AnimatePresence>
       </ThemeProvider>
     </Provider>
   )
