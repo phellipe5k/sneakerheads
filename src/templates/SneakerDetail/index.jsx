@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import * as S from './style';
 import Base from '../Base';
 import ImagesGallery from '../../components/ImagesGallery';
+import { slide, dissolve } from '../../Animations';
 import { Favorite, FavoriteBorder } from '@styled-icons/material';
 import Select from '../../components/Select';
 import Adidas from './icons/adidas';
@@ -12,6 +13,7 @@ import Puma from './icons/puma';
 import Converse from './icons/converse';
 import Vans from './icons/vans';
 import NewBalance from './icons/newBalance';
+import { motion } from 'framer-motion';
 
 const SneakerDetail = ({ sneaker, colors, luminosity }) => {
   const [selectedSize, setSelectedSize] = useState('');
@@ -67,14 +69,14 @@ const handleBrand = (brand) => {
   }
   return (
     <Base>
-      <S.Container color={decide()}>
+      <S.Container exit={{opacity: 0}} initial="initial" animate="animate" color={decide()}>
         <S.WrapImagesGallery>
           <ImagesGallery sneaker={sneaker} />
         </S.WrapImagesGallery>
-        <S.ShoesWrapper>
+        <S.ShoesWrapper variants={ slide.up }>
           <S.Shoes urls={sneaker.thumbnail}></S.Shoes>
         </S.ShoesWrapper>
-        <S.Void luminosity={luminosity ? luminosity : 'white'}>
+        <S.Void luminosity={luminosity ? luminosity : 'white'} variants={slide.right} >
           <S.Info>
             <S.Favorite luminosity={luminosity} onClick={() => setFavorited(!favorited)} favorited={favorited}>
               <FavoriteBorder id="stroke" />
@@ -124,11 +126,11 @@ const handleBrand = (brand) => {
           </S.WrapDescription>
         </S.Void>
 
-        <svg id="background" width="1440" height="1033" viewBox="0 0 1440 1033" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <motion.svg variants={slide.right} id="background" width="1440" height="1033" viewBox="0 0 1440 1033" fill="none" xmlns="http://www.w3.org/2000/svg">
          <path d="M0 0996L1290.59 -76L1440 -60V1062L0 1046Z"/>
         <circle r="38.5" transform="matrix(1 0 0 -1 870 288)" fill="white" stroke="#3F3932" strokeWidth="5"/>
         {handleBrand(sneaker.brand)}
-      </svg>
+      </motion.svg>
       </S.Container>
     </Base>
   )

@@ -1,6 +1,7 @@
 import SneakerDetail from '../../templates/SneakerDetail';
 import Axios from 'axios';
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 import useImageColor from 'use-image-color';
 
 export default function SneakerDetailPage({ data }) {
@@ -27,9 +28,9 @@ export default function SneakerDetailPage({ data }) {
     }
   }
   return (
-    <>
+    <motion.div exit={{opacity: 0}} initial="initial" animate="animate">
     <SneakerDetail sneaker={ data } colors={colors} luminosity={luminosity()} />
-    </>
+    </motion.div>
   )
 }
 /*

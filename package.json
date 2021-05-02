@@ -12,6 +12,7 @@
     "disable-scroll": "^0.6.0",
     "dominant-color": "0.0.1",
     "eslint": "^7.15.0",
+    "framer-motion": "^4.1.11",
     "get-image-colors": "^4.0.0",
     "image-palette": "^2.1.0",
     "image-to-colors": "^1.0.2",

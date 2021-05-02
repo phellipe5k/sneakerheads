@@ -1,11 +1,12 @@
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 import { mediaQuery } from '../../styles/theme';
 
 export const Wrapper = styled.div`
 
 `;
 
-export const LisWrapper = styled.div`
+export const LisWrapper = styled(motion.div)`
   ${({ theme, filterOn }) => css`
     transition: ${theme.transition.default};
     width: ${filterOn ? '75%' : '100%'};
@@ -16,7 +17,7 @@ export const LisWrapper = styled.div`
   `}
 `
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
