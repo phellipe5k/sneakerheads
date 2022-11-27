@@ -16,6 +16,7 @@ export const Box = styled.div`
     min-height: 320px;
     padding: ${theme.spacings.inside.small};
     width: 100%;
+    margin-top: 100px;
     ${mediaQuery.lessThan("mobile")`
       align-items: baseline;
       background-color: ${theme.colors.primary};

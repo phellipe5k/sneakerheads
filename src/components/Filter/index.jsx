@@ -1,7 +1,11 @@
+import { useContext } from 'react';
+import Context from '../../Provider/Context';
 import * as S from './style';
 import Checkbox from '../Checkbox';
 const Filter = ({ children }) => {
+  const { filter, setFilter } = useContext(Context);
   const handleCheckBox = (target) => {
+    setFilter(v => ({ ...v, price: { ...v.price, [target.id]: target.checked } }));
   };
 
   return (
@@ -9,37 +13,37 @@ const Filter = ({ children }) => {
       <S.ChecksSection>
         <S.Title>Price</S.Title>
         <Checkbox
-          id="less-75"
+          id="less_75"
           onChange={ handleCheckBox }
         >
           Less than $ 75,00
         </Checkbox>
         <Checkbox
-          id="less-150"
+          id="less_150"
           onChange={ handleCheckBox }
         >
           Less than$150,00
         </Checkbox>
         <Checkbox
-          id="less-250"
+          id="less_250"
           onChange={ handleCheckBox }
         >
           Less than $250,00
         </Checkbox>
         <Checkbox
-          id="less-350"
+          id="less_350"
           onChange={ handleCheckBox }
         >
           Less than $350,00
         </Checkbox>
         <Checkbox
-          id="greater-400"
+          id="greater_400"
           onChange={ handleCheckBox }
         >
           Greater than $400,00
         </Checkbox>
         <Checkbox
-          id="greater-1000"
+          id="greater_1000"
           onChange={ handleCheckBox }
         >
           Greater than $1000,00

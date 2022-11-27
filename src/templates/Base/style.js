@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 export const Container = styled(motion.div)`
   ${({theme, path}) => {
     return path !== '/' && css`
+    overflow-x: hidden;
     background-color: ${path === '/sneakers/[id]' ? theme.colors.secondary : theme.colors.background };
   `
   }}

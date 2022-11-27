@@ -3,8 +3,9 @@ import Context from './Context';
 
 const Provider =  ({ children }) => {
   const [test, setTest] = useState('as');
+  const [filter, setFilter] = useState({});
   const constObject = {
-    test, setTest
+    test, setTest, filter, setFilter
   }
 
   return (

@@ -13,7 +13,7 @@ export default function SneakersPage({ data }) {
 
 export async function getServerSideProps(context) {
 
-  const url = 'https://sneakers-api-app.herokuapp.com';
+  const url = process.env.NEXT_APP_API_URL || 'http://localhost:3001';
   if (context.query.search) {
     const { search } = context.query;
     const { data } = await Axios.get(`${url}/search/${search}`);

@@ -33,26 +33,12 @@ export default function SneakerDetailPage({ data }) {
     </motion.div>
   )
 }
-/*
-export async function getStaticPaths() {
-  // Call an external API endpoint to get posts
-  const { data } = await fetch(`https://sneakers-api-app.herokuapp.com/id/${}`)
-  const posts = await res.json()
-
-  // Get the paths we want to pre-render based on posts
-  const paths = posts.map((post) => ({
-    params: { id: post.id },
-  }))
-
-  // We'll pre-render only these paths at build time.
-  // { fallback: false } means other routes should 404.
-  return { paths, fallback: false }
-}*/
 
 export async function getServerSideProps(context) {
   const { id } = context.query;
-  const url = 'https://sneakers-api-app.herokuapp.com';
+  const url = process.env.NEXT_APP_API_URL || 'http://localhost:3001';
   const { data } = await Axios.get(`${url}/id/${ id }/prices`)
+  console.log('data: ', data)
   return {
     props: { data }, // will be passed to the page component as props
   }

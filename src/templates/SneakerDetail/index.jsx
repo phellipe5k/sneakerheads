@@ -47,7 +47,8 @@ const handleBrand = (brand) => {
     }
   }
   useEffect(() => {
-    const size = Object.keys(sneaker.resellPrices.stockX)[0];
+    console.log(sneaker, 'uahsduhasda')
+    const size = Object.keys(sneaker.lowestResellPrice.stockX)[0];
     setSelectedSize(size)
   }, [])
   const decide = () => {
@@ -62,8 +63,8 @@ const handleBrand = (brand) => {
   }
 
   const validateNumber = (store) => {
-    if(sneaker.resellPrices[store] && sneaker.resellPrices[store][selectedSize]) {
-      return `$ ${sneaker.resellPrices[store][selectedSize]}`;
+    if(sneaker.lowestResellPrice[store] && sneaker.lowestResellPrice[store]) {
+      return `$ ${sneaker.lowestResellPrice[store]}`;
     }
     return '- - - -'
   }
@@ -71,7 +72,6 @@ const handleBrand = (brand) => {
     <Base>
       <S.Container exit={{opacity: 0}} initial="initial" animate="animate" color={decide()}>
         <S.WrapImagesGallery>
-          <ImagesGallery sneaker={sneaker} />
         </S.WrapImagesGallery>
         <S.ShoesWrapper variants={ slide.up }>
           <S.Shoes urls={sneaker.thumbnail}></S.Shoes>
@@ -89,12 +89,7 @@ const handleBrand = (brand) => {
           </S.Info>
           <S.WrapSizes>
             <S.Sizes>
-              <h3>Choose your size</h3>
-             <S.WrapSelect>
-              <Select secondary onChange={({target}) => setSelectedSize(target.value)}>
-                {Object.keys(sneaker.resellPrices.stockX).sort((a, b) => a - b).map((size, index) => <option value={size} key={ index } >{size}</option>)}
-                </Select>
-             </S.WrapSelect>
+              <h3>Lowest prices</h3>
               <S.Stores>
                 <S.Boxes href={ `${stockxLink}?size=${ selectedSize }` } target="_blank">
                   <S.Prices>{validateNumber('stockX')}</S.Prices>
