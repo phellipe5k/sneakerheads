@@ -14,7 +14,7 @@ const Sneakers = ({ sneaker }) => {
   const [filterOn, setFilterOn] = useState(false);
   const [data, setData] = useState(sneaker);
   const handleInput = async ({ target }) => {
-    const { data } = await Axios.get(`https://sneakers-api-app.herokuapp.com/search/${ target.value }`);
+    const { data } = await Axios.get(`http://localhost:3000/search/${ target.value }`);
     setData(data);
   };
   return (
